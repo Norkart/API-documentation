@@ -6,9 +6,9 @@ See [code and tutorials](code and tutorials) for complete list of code-snippets,
 
 Documented API's:
 
-*  [](API-maptiles)
-* [](~~API-fritekstsok~~])
-* [](~~API-matrikkelkart~~)
+* [API-maptiles](API-maptiles)
+* [~~API-fritekstsok~~](API-fritekstsok])
+* [~~API-matrikkelkart~~](API-matrikkelkart)
 
 
 
