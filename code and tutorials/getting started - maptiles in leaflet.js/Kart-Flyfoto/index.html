@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+      <meta charset="utf-8" />
+
+<title>Norkart API-Tutorial with Leaflet MAP - AERIAL</title>
+
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+<link rel="stylesheet" href="mFlyfoto.css"/>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+ </head>
+
+ <body>
+   <h2> This is AERIAL View Code Tutorial</h2><br>
+   
+  <!-- This is the container for the map-->
+  <div id="mapid"></div>
+
+  <!-- Load Norkart's Leaflet plugin for Maptiles: L.TileLayer.Webatlas
+  Use the latest version at: https://github.com/Norkart/L.TileLayer.Webatlas -->
+  <script src="https://cdn.jsdelivr.net/gh/norkart/L.TileLayer.Webatlas/L.TileLayer.Webatlas.min.js"></script>
+  <script type="text/javascript" src="mFlyfoto.js"></script>
+
+</body>
+
+</html>
