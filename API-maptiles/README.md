@@ -31,19 +31,19 @@ options: {
 
 We provide a plugin for handling attribution and URL-endpoints for Leaflet.js. You can find details and code here: 
 
-* https://github.com/Norkart/L.TileLayer.Webatlas/blob/master/src/L.TileLayer.Webatlas.js
+* https://github.com/Norkart/L.TileLayer.Webatlas/
 
 
 
 ### Usage in other libraries / desktop systems
 
-For use in other libraries or desktop systems - please refer to the url-schemes above. Reach out at https://developer.norkart.no/ for support
+For use in other libraries or desktop systems - please refer to the url-schemes above and see the examples and tutorials below. Remember to reach out at https://developer.norkart.no/ for support. 
 
 ### Code examples and tutorials
 
-* (getting started - maptiles in leaflet.js)[../code and tutorials/getting started - maptiles in leaflet.js/]
-* (getting started - maptiles in leaflet.js)[../code and tutorials/getting started - maptiles in mapbox.gl/]
-* (getting started - fritekstsok)[../code and tutorials/getting started - fritekstsok/]
+* [../code and tutorials/getting started - maptiles in leaflet.js/](getting started - maptiles in leaflet.js)
+* [../code and tutorials/getting started - maptiles in mapbox.gl/](getting started - maptiles in leaflet.js)
+* [../code and tutorials/getting started - fritekstsok/](getting started - fritekstsok)
 
 
 
