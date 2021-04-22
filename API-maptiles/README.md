@@ -41,9 +41,9 @@ For use in other libraries or desktop systems - please refer to the url-schemes 
 
 ### Code examples and tutorials
 
-* [../code and tutorials/getting started - maptiles in leaflet.js/](getting started - maptiles in leaflet.js)
-* [../code and tutorials/getting started - maptiles in mapbox.gl/](getting started - maptiles in leaflet.js)
-* [../code and tutorials/getting started - fritekstsok/](getting started - fritekstsok)
+* [getting started - maptiles in leaflet.js](../code and tutorials/getting started - maptiles in leaflet.js/)
+* [getting started - maptiles in leaflet.js](../code and tutorials/getting started - maptiles in mapbox.gl/)
+* [getting started - fritekstsok](../code and tutorials/getting started - fritekstsok/)
 
 
 
