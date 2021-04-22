@@ -21,3 +21,6 @@ style: {
         'attribution': '© 2020 Norkart AS/Geovekst og kommunene/OpenStreetMap/NASA/EEA CLC2006/Meti/Plan- og bygningsetaten, Oslo Kommune'
 	}
 ```
+
+### Api Key
+Log in at [developer.norkart.no](developer.norkart.no) to get a trial api-key.

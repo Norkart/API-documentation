@@ -25,6 +25,8 @@ options: {
         },
 ``````
 
+### Api Key
+Log in at [developer.norkart.no](developer.norkart.no) to get a trial api-key.
 
 
 ### Plugin for Leaflet.js
