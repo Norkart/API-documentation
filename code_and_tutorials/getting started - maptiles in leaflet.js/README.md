@@ -1,9 +1,5 @@
 # Getting started with maptiles in Leaflet.js
 
-[Developer documentation for Maptiles](../API-maptiles)
-
-
-
 Relevant code-examples
 
 * [CodePen example of Maptiles in Leaflet.js](https://codepen.io/alexanno/pen/EzrjEb)
