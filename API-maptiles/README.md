@@ -14,7 +14,7 @@ The different options provided is detailed here with a code snippet from the lib
 
 `````` javascript
 options: {
-    url: '//waapi.webatlas.no/maptiles/tiles/{tileset}/wa_grid/{z}/{x}/{y}.{ext}?APITOKEN={apikey}',
+    url: 'http://waapi.webatlas.no/maptiles/tiles/{tileset}/wa_grid/{z}/{x}/{y}.{ext}?APITOKEN={apikey}',
         tileset: {
             vector: {tileset: 'webatlas-standard-vektor', ext: 'png'},
             aerial: {tileset: 'webatlas-orto-newup', ext: 'jpeg'},
