@@ -45,4 +45,4 @@ For use in other libraries or desktop systems - please refer to the url-schemes 
 
 * [getting started - maptiles in leaflet.js](../getting%20started%20-%20maptiles%20in%20leaflet.js)
 * [getting started - maptiles in leaflet.js](../code_and_tutorials/getting%20started%20-%20maptiles%20in%20mapbox.gl)
-* [getting started - fritekstsok](../code and tutorials/getting%20started%20-%20fritekstsok)
+* [getting started - fritekstsok](../code_and_tutorials/getting%20started%20-%20fritekstsok)
