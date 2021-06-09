@@ -1,25 +1,54 @@
 # API-Fritekstsok
 
-Textual description of the main functionality of the API
-
-Swagger-link
+Swagger: [Fritekstsok-Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/)
 
 
+## Example of a simple street address search.
 
-Example requests
+The ```suggest/matrikkel/adresse``` endpoint, returns a list of address suggestions based on the ```Query``` parameter, where you can limit the size of the returned list by the ```Size``` parameter. 
+
+Example request
+
+```
+https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslo&Size=1&api_key={{YOUR_API_KEY}}
+```
+
+Example response
+
+```
+{
+    "Text": "Oslo",
+    "Options": [
+        {
+            "Id": "03011544900030000000",
+            "Type": "gateadresse",
+            "Text": "Oslo gate 3, Oslo",
+            "Score": 2.10000973E+09,
+            "Url": "https://www.webatlas.no/WAAPI-FritekstSok/data/matrikkel/adresse/gateadresse/03011544900030000000",
+            "PayLoad": {
+                "__type": "WAAPI.FritekstSok.ServiceModel.Types.GateAdressePayLoad, WAAPI.FritekstSok.ServiceModel",
+                "AdresseMatrikkelNummer": "03010023400160000000",
+                "Text": "Oslo gate 3, Oslo",
+                "AdresseId": "03011544900030000000",
+                "VegAdresseId": "03011544900030",
+                "Posisjon": {
+                    "X": 10.7674570988434,
+                    "Y": 59.907481195312,
+                    "SRS": 4326
+                },
+                "PostNummer": "0192",
+                "PostSted": "OSLO"
+            },
+            "LevenshteinScore": 13,
+            "ExactMatches": 2
+        }
+    ],
+    "SRS": 4326
+}
 
 ```
 
-```
-
-
-
-Example responses
-
-```
-
-```
-
+The ```Url``` field in the response contains the search endpoint where you more detailed information over the address in question.  
 
 
 ## Getting started
