@@ -26,6 +26,10 @@ export type Teig = {
     Geometri: string
 }
 
+export const position = atom<LatLng>({
+    key: "position",
+    default: { lat: 10, lng: 60 }
+  });
 
 export const selectedTeig = selector<Teig[]>({
     key: "selectedTeig",
