@@ -23,7 +23,7 @@ export type LatLng = {
 
 export type Teig = {
     Matrikkelnummer: string,
-    Geometri: string
+    Geometri: any
 }
 
 export const position = atom<LatLng>({
@@ -34,10 +34,13 @@ export const position = atom<LatLng>({
 export const selectedTeig = selector<Teig[]>({
     key: "selectedTeig",
     get: async ({get}) => {
+      
+
       const address = get(selectedAddress);
       const key = get(apiKey);
   
-      if (address && key) {
+
+      if (address !== { latLng: { lat: 10, lng: 60 }, id: "1", text: "text" } && key) {
         const apiResult = await fetch(
           `https://www.webatlas.no/WAAPI-Matrikkelkart/teig/punkt?X=${address.latLng.lat}&Y=${address.latLng.lng}&apikey=${key}&GeometryTextFormat=GeoJson`,
           {
