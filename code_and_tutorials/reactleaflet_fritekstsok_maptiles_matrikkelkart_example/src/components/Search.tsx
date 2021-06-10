@@ -32,7 +32,7 @@ export const Search = () => {
                 if(apiResult.status === 200){
                     var json = await apiResult.json();
                     json.Options.forEach((suggestion: any) => {
-                        suggestions.push({id: suggestion.Id,  text: suggestion.Text, latLng: {lat: suggestion.PayLoad.Posisjon.X, lng: suggestion.PayLoad.Posisjon.Y}})
+                        suggestions.push({id: suggestion.Id,  text: suggestion.Text, latLng: {lat: suggestion.PayLoad.Posisjon.Y, lng: suggestion.PayLoad.Posisjon.X}})
                     });
                     setSuggestedAddresses(suggestions);
                 }

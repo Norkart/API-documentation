@@ -7,7 +7,7 @@ export const apiKey = atom<string>({
 
 export const selectedAddress = atom<Address>({
   key: "selectedAddress",
-  default: { latLng: { lat: 10, lng: 60 }, id: "1", text: "text" },
+  default: { latLng: { lat:63.441342575975796 , lng:  10.401360822656011 }, id: "1", text: "text" },
 });
 
 export type Address = {
@@ -33,8 +33,7 @@ export const position = atom<LatLng>({
 
 export const selectedTeig = selector<Teig[]>({
     key: "selectedTeig",
-    get: async ({get}) => {
-      
+    get: async ({get}) => {      
 
       const address = get(selectedAddress);
       const key = get(apiKey);
@@ -42,7 +41,7 @@ export const selectedTeig = selector<Teig[]>({
 
       if (address !== { latLng: { lat: 10, lng: 60 }, id: "1", text: "text" } && key) {
         const apiResult = await fetch(
-          `https://www.webatlas.no/WAAPI-Matrikkelkart/teig/punkt?X=${address.latLng.lat}&Y=${address.latLng.lng}&apikey=${key}&GeometryTextFormat=GeoJson`,
+          `https://www.webatlas.no/WAAPI-Matrikkelkart/teig/punkt?X=${address.latLng.lat}&Y=${address.latLng.lng}&api_key=${key}&GeometryTextFormat=GeoJson`,
           {
             headers: {
               Accept: "application/json",
