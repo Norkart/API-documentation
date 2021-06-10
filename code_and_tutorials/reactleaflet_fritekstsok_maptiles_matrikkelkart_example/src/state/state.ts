@@ -28,7 +28,7 @@ export type Teig = {
 
 export const position = atom<LatLng>({
     key: "position",
-    default: { lat: 10, lng: 60 }
+    default: { lat: 10.401360822656011, lng: 63.441342575975796 }
   });
 
 export const selectedTeig = selector<Teig[]>({
