@@ -1,5 +1,5 @@
 import React from 'react'
-import {atom, selector, useRecoilState} from 'recoil';
+import { useRecoilState } from 'recoil';
 import { apiKey } from '../state/state'
 import { Box , TextField } from '@material-ui/core';
 
@@ -9,7 +9,6 @@ interface Props {
 
 export const ApiKey = (props: Props) => {
     const [key, setKey]= useRecoilState(apiKey);
-    console.log(key)
     const handleTextfieldChange = (e: any) => {
         if (e.target.value.length == 36) {
             setKey(e.target.value);
