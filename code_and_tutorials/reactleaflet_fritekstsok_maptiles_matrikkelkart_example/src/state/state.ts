@@ -1,24 +1,24 @@
-import {atom, selector} from 'recoil';
-
+import { atom, selector } from "recoil";
 
 export const apiKey = atom<string>({
-    key: 'apiKey',
-    default: ''
-})
-
+  key: "apiKey",
+  default: "",
+});
 
 export const selectedAddress = atom<Address>({
-    key: 'selectedAddress',
-    default: {latLng: {lat: 10, lng: 60}, id: "1", text: "text"}
-})
+  key: "selectedAddress",
+  default: { latLng: { lat: 10, lng: 60 }, id: "1", text: "text" },
+});
 
-type Address = {
-    id: string,
-    latLng: LatLng,
-    text: string
-  }
+export type Address = {
+  id: string;
+  latLng: LatLng;
+  text: string;
+};
 
-  type LatLng = {
-    lat: number,
-    lng: number
-  }
+export type LatLng = {
+  lat: number;
+  lng: number;
+};
+
+
