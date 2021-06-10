@@ -1,4 +1,4 @@
-import { TextField } from '@material-ui/core';
+import { Button, TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { Address, apiKey, selectedAddress } from '../state/state';
@@ -53,7 +53,7 @@ export const Search = () => {
                     onChange={(e) => setQuery(e.target.value)}
             />
             </form>
-                {suggestedAdress && suggestedAdress.map((address : Address) => <p onClick={setAddress.bind(this, address)}>{address.text}</p>)}
+                {suggestedAdress && suggestedAdress.map((address : Address) => <Button onClick={setAddress.bind(this, address)}>{address.text}</Button>)}
             </div>                 
             }
         </div>
