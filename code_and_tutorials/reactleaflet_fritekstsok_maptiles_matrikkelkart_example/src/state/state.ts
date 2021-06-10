@@ -21,4 +21,9 @@ export type LatLng = {
   lng: number;
 };
 
+export type Teig = {
+    Matrikkelnummer: string,
+    Geometri: string
+}
+
 
