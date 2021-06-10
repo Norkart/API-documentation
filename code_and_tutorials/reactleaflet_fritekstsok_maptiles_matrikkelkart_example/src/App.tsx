@@ -11,7 +11,6 @@ function App() {
       <ApiKey />
       <Search />
       <Map/>
-     content here
     </div>
   );
 }
