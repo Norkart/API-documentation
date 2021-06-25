@@ -1,11 +1,17 @@
 import React from 'react'
 import { useRecoilState } from 'recoil';
 import { apiKey } from '../state/state'
-import { Box , Link, TextField, Typography } from '@material-ui/core';
+import { Box , Button, TextField, Typography } from '@material-ui/core';
 
 interface Props {
     
 }
+
+//https://stackoverflow.com/a/63627688/13774540
+const openInNewTab = (url: string) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+  };
 
 export const ApiKey = (props: Props) => {
     const [key, setKey]= useRecoilState<string | null>(apiKey);
@@ -24,7 +30,7 @@ export const ApiKey = (props: Props) => {
 
             <Typography variant="subtitle1">Need access?</Typography>
             <Typography variant="subtitle1">Get a free trial key at</Typography>
-            <Link href="https://developer.norkart.no/">developer.norkart.no</Link>
+            <Button variant='contained' color='primary' onClick={() => openInNewTab("https://developer.norkart.no/")}>developer.norkart.no</Button>
         </Box>
         : null
     )

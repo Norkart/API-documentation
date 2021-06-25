@@ -1,8 +1,8 @@
 import React, { Suspense } from "react"
 import { MapContainer, TileLayer } from "react-leaflet"
 import { useRecoilValue } from "recoil"
-import { apiKey, selectedPosition } from "../state/state"
-import { MapComps } from "./MapComps"
+import { apiKey, selectedAddress} from "../state/state"
+import { MapLayers } from "./MapLayers"
 import { Search } from "./Search"
 
 
@@ -11,19 +11,21 @@ interface Props {
 }
 
 export const Map = (props: Props) => {
-    const position = useRecoilValue(selectedPosition)
-    const apikey = useRecoilValue(apiKey)
+    const address = useRecoilValue(selectedAddress);
+    const apikey = useRecoilValue(apiKey);
+
+    const latlngOrDefault = address ? address.latLng : { lat: 63.426891, lng: 10.396416}; 
 
     return (
         <div>
-            {apikey && position &&
-                <MapContainer style={{ height: '100vh', width: '100vw' }} center={position} zoom={16} scrollWheelZoom={true}>
+            {apikey &&
+                <MapContainer style={{ height: '100vh', width: '100vw' }} center={latlngOrDefault} zoom={16} scrollWheelZoom={true}>
                     <Suspense fallback={<div></div>}>
                         <TileLayer
-                            url={`https://waapi.webatlas.no/maptiles/tiles/webatlas-orto-newup/wa_grid/{z}/{x}/{y}.jpeg?APITOKEN=${apikey}`}
+                            url={`https://waapi.webatlas.no/maptiles/tiles/webatlas-standard-hybrid/wa_grid/{z}/{x}/{y}.jpeg?APITOKEN=${apikey}`}
                             attribution={`Norkart`}
                         />
-                        <MapComps/>
+                        <MapLayers/>
                         <div className='leaflet-control-container'>
                             <div className='leaflet-top leaflet-right'>
                                 <div className='leaflet-control' style={{flex: 1}}>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { createStyles, InputBase, List, ListItem, ListItemText, makeStyles, Paper, Theme } from '@material-ui/core';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { Address, apiKey, selectedAddress } from '../state/state';
+import { getGateadresseByQuery } from '../utils/fritekstsoekapi';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -40,21 +41,10 @@ export const Search = () => {
 
     useEffect(() => {
         
-        const searchQuery = `https://www.webatlas.no/WAAPI-FritekstSok/suggest/kommunecustom?Query=${query}&Size=5&Targets=gateadresse`; 
         async function runFritekstoek(){
-            if(query){
+            if(query && apiKeyState){
                 const suggestions = new Array<Address>();
-                const apiResult = await fetch(
-                    `${searchQuery}`,
-                    {
-                        headers: {
-                        'Accept': 'application/json',
-                        'X-WAAPI-TOKEN': `${apiKeyState}`
-                        },
-                        method: "GET"
-                    }
-                    );
-        
+                const apiResult = await getGateadresseByQuery(query, apiKeyState);
                 if(apiResult.status === 200){
                     const json = await apiResult.json();
                     json.Options.forEach((suggestion: any) => {

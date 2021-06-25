@@ -3,7 +3,7 @@ import { GeoJSON, useMap} from "react-leaflet"
 import { useRecoilValue } from "recoil"
 import { Address, selectedAddress, selectedTeig, Teig } from "../state/state"
 
-export const MapComps = () => {
+export const MapLayers = () => {
     const address = useRecoilValue<Address | null>(selectedAddress)
     const teiger  = useRecoilValue<Teig[] | null>(selectedTeig)
     const map = useMap()
