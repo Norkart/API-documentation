@@ -6,11 +6,7 @@ import { MapLayers } from "../MapLayers"
 import { TopLeftMapControl } from "./TopLeftMapControl"
 
 
-interface Props {
-
-}
-
-export const Map = (props: Props) => {
+export const Map = () => {
     const address = useRecoilValue(selectedAddress);
     const apikey = useRecoilValue(apiKey);
 
