@@ -30,15 +30,13 @@ const useStyles = makeStyles((theme: Theme) =>
         autocomplete: {
             maxWidth: '80vw',
             width: 350,
-        },
-        textField: {
-
         }
     }),
 );
 
 export const Search = () => {
     const classes = useStyles();
+
 
     const apiKeyState = useRecoilValue<string | null>(apiKey);
     const [selectedAdress, setSelectedAdress] = useRecoilState<Address | null>(selectedAddress);
@@ -52,7 +50,7 @@ export const Search = () => {
                     const results = await fritekstsok(input, apiKeyState)
                     callback(results)
                 }
-            }, 150),
+            }, 100),
         [apiKeyState],
     );
 
@@ -113,7 +111,6 @@ export const Search = () => {
                     <CustomTextField
                         {...params}
                         id="standard-basic"
-                        className={classes.textField}
                         color='secondary'
                         variant="outlined"
                         placeholder="Search Adress"

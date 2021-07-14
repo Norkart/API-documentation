@@ -1,7 +1,7 @@
 import React from 'react';
 import { ApiKey } from './components/ApiKey'
 import './App.css';
-import { Map } from './components/Map';
+import { Map } from './components/map/Map';
 import { RecoilRoot } from 'recoil';
 import bluegrey from '@material-ui/core/colors/blueGrey';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
