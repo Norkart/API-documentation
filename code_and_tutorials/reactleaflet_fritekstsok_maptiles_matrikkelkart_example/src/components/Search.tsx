@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react'
 import { createStyles, InputAdornment, makeStyles, TextField, Theme, withStyles } from '@material-ui/core';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { Address, apiKey, selectedAddress } from '../state/state';
-import { fritekstsok } from '../utils/fritekstsoekapi';
+import { fritekstsok } from '../utils/fritekstsokapi';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import SearchIcon from '@material-ui/icons/Search';
 import { debounce } from 'lodash';
