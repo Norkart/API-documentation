@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme: Theme) =>
         autocomplete: {
             maxWidth: '80vw',
             width: 350,
+        },
+        searchIcon: {
+            opacity: 0.5
         }
     }),
 );
@@ -110,8 +113,8 @@ export const Search = () => {
                 renderInput={(params: any) =>
                     <CustomTextField
                         {...params}
+                        color="secondary"
                         id="standard-basic"
-                        color='secondary'
                         variant="outlined"
                         placeholder="Search Adress"
                         size="small"
@@ -119,7 +122,7 @@ export const Search = () => {
                             ...params.InputProps,
                             endAdornment:
                                 <InputAdornment position="end">
-                                    <SearchIcon color='secondary' />
+                                    <SearchIcon className={classes.searchIcon} />
                                 </InputAdornment>
                         }}
                     />}
