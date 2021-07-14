@@ -1,91 +1,133 @@
-import React, { useEffect, useState } from 'react'
-import { createStyles, InputBase, List, ListItem, ListItemText, makeStyles, Paper, Theme } from '@material-ui/core';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useEffect, useState, useMemo } from 'react'
+import { createStyles, InputAdornment, makeStyles, TextField, Theme, withStyles } from '@material-ui/core';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { Address, apiKey, selectedAddress } from '../state/state';
-import { getGateadresseByQuery } from '../utils/fritekstsoekapi';
+import { fritekstsok } from '../utils/fritekstsoekapi';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import SearchIcon from '@material-ui/icons/Search';
+import { debounce } from 'lodash';
 
+const CustomTextField = withStyles((theme: Theme) => ({
+    root: {
+        backgroundColor: 'white',
+        borderRadius: 10,
+
+        '& .MuiInputBase-root': {
+            paddingRight: `${theme.spacing(2)}px !important`,
+        },
+        '& .MuiAutocomplete-inputRoot': {
+            padding: `${theme.spacing(1)}px !important`,
+        },
+    },
+}))(TextField);
 
 const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'right',
-        width: 400,
-      },
-    searchbox: {
-        padding: '2px 4px',
-        textAlign: 'left',
-        width: 400,
-      },
-    input: {
-        marginLeft: theme.spacing(1),
-        flex: 1,
-    },
-    suggestions: {
-        width: 300,
-        backgroundColor: 'white',
-        borderRadius: 4
-    }
-  }),
-);
+    createStyles({
+        root: {
+            display: 'flex',
+            justifyContent: 'right',
+        },
+        autocomplete: {
+            maxWidth: '80vw',
+            width: 350,
+        },
+        textField: {
 
+        }
+    }),
+);
 
 export const Search = () => {
     const classes = useStyles();
-    const [query, setQuery] = useState<string | null>(null);
-    const [suggestedAdress, setSuggestedAddresses] = useState<Address[] | null>(null);
+
     const apiKeyState = useRecoilValue<string | null>(apiKey);
-    const setAddress = useSetRecoilState<Address | null>(selectedAddress);
+    const [selectedAdress, setSelectedAdress] = useRecoilState<Address | null>(selectedAddress);
+    const [inputValue, setInputValue] = useState('');
+    const [adressOptions, setAdressOptions] = useState<Address[]>([])
+
+    const fetchFromFritekstsok = useMemo(
+        () =>
+            debounce(async (input: string, callback: (results: Address[]) => void) => {
+                if (input && apiKeyState) {
+                    const results = await fritekstsok(input, apiKeyState)
+                    callback(results)
+                }
+            }, 150),
+        [apiKeyState],
+    );
 
     useEffect(() => {
-        
-        async function runFritekstoek(){
-            if(query && apiKeyState){
-                const suggestions = new Array<Address>();
-                const apiResult = await getGateadresseByQuery(query, apiKeyState);
-                if(apiResult.status === 200){
-                    const json = await apiResult.json();
-                    json.Options.forEach((suggestion: any) => {
-                        suggestions.push({id: suggestion.Id,  text: suggestion.Text, latLng: {lat: suggestion.PayLoad.Posisjon.Y, lng: suggestion.PayLoad.Posisjon.X}})
-                    });
-                    setSuggestedAddresses(suggestions);
-                }
-            }
-        }
-        runFritekstoek();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [query])
+        let active = true;
 
-    const onAddressSelected = (address: Address) => {
-        setQuery("");
-        setAddress(address);
-        setSuggestedAddresses(null);
-    }
+        if (inputValue === '') {
+            setAdressOptions([]);
+        }
+
+        fetchFromFritekstsok(inputValue, (results: Address[]) => {
+            if (active) {
+
+                let newOptions = [] as Address[];
+
+                if (selectedAdress) {
+                    newOptions = [selectedAdress];
+                }
+
+                if (results) {
+                    newOptions = [...newOptions, ...results];
+                }
+
+                setAdressOptions(newOptions);
+            }
+        });
+
+
+        return () => {
+            active = false;
+        };
+
+    }, [selectedAdress, inputValue, fetchFromFritekstsok]);
+
+
 
     return (
         <div>
-            {apiKeyState &&
-            <div className={classes.searchbox}>
-                <div className={classes.searchbox}>
-                    <Paper component='form'>
-                    <InputBase
-                        value={query}
-                        className={classes.input}
-                        placeholder="Søk opp adresse"
-                        inputProps={{ 'aria-label': 'Søk opp adresse' }}
-                        onChange={(e) => setQuery(e.target.value)}
-                    />
-                </Paper>
-                </div>
-                <div className={classes.suggestions}>
-                    {suggestedAdress && <List dense>
-                            {suggestedAdress.map((address : Address) => <ListItem button key={address.id} onClick={onAddressSelected.bind(this, address)}><ListItemText primary={address.text}/></ListItem>)}
-                        </List>}
-                </div>
-            </div>                 
-            }
+            <Autocomplete
+                id="fritekstsok-demo"
+                options={adressOptions}
+                value={selectedAdress}
+                getOptionLabel={(s: Address) => s.text}
+                filterOptions={(x) => x}
+                className={classes.autocomplete}
+                autoComplete
+                includeInputInList
+                filterSelectedOptions
+                onChange={(_, newValue: Address | null) => {
+                    setAdressOptions(newValue ? [newValue, ...adressOptions] : adressOptions);
+                    setSelectedAdress(newValue);
+                }}
+                onInputChange={(_, newInputValue) => {
+                    setInputValue(newInputValue);
+                }}
+
+                renderInput={(params: any) =>
+                    <CustomTextField
+                        {...params}
+                        id="standard-basic"
+                        className={classes.textField}
+                        color='secondary'
+                        variant="outlined"
+                        placeholder="Search Adress"
+                        size="small"
+                        InputProps={{
+                            ...params.InputProps,
+                            endAdornment:
+                                <InputAdornment position="end">
+                                    <SearchIcon color='secondary' />
+                                </InputAdornment>
+                        }}
+                    />}
+            />
         </div>
+
     )
 }

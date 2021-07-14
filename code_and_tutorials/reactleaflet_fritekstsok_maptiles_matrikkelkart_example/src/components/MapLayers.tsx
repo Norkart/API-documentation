@@ -10,7 +10,7 @@ export const MapLayers = () => {
     
     useEffect(() => {
         if(address){
-            map.panTo(address.latLng) 
+            map.panTo(address.latlng) 
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [address])

@@ -14,7 +14,7 @@ export const Map = (props: Props) => {
     const address = useRecoilValue(selectedAddress);
     const apikey = useRecoilValue(apiKey);
 
-    const latlngOrDefault = address ? address.latLng : { lat: 63.426891, lng: 10.396416}; 
+    const latlngOrDefault = address ? address.latlng : { lat: 63.426891, lng: 10.396416}; 
 
     return (
         <div>

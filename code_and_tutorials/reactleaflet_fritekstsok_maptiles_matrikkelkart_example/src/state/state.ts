@@ -1,18 +1,19 @@
 import { atom, selector } from "recoil";
 import { getTeigByCoordinate } from "../utils/matrikkelkartapi";
 
-export type Address = {
+export interface Address {
   id: string;
-  latLng: LatLng;
+  matrikkelId: string;
   text: string;
-};
+  latlng: LatLng;
+}
 
-export type LatLng = {
+export interface LatLng {
   lat: number;
   lng: number;
-};
+}
 
-export type Teig = {
+export interface Teig {
     Matrikkelnummer: string,
     Geometri: any
 }
@@ -35,7 +36,7 @@ export const selectedTeig = selector<Teig[] | null>({
       const key = get(apiKey);
      
       if (address && key) {
-        const apiResult = await getTeigByCoordinate(address.latLng, key);
+        const apiResult = await getTeigByCoordinate(address.latlng, key);
         const json = await apiResult.json();
         const enheter = new Array<Teig>();
         json.Teiger.forEach((teig: any) => {
