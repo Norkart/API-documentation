@@ -19,8 +19,10 @@ export const TopLeftMapControl = () => {
         <div ref={divRef} className='leaflet-control-container'>
         <div className='leaflet-top leaflet-left'>
             <div className='leaflet-control' style={{flex: 1}}>
-                <Search />
+                <Search/>
+                
             </div>
+            
         </div>
     </div>
     )

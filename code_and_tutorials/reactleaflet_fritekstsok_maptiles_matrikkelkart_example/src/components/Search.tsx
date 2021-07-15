@@ -24,12 +24,15 @@ const CustomTextField = withStyles((theme: Theme) => ({
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            display: 'flex',
-            justifyContent: 'right',
+            [theme.breakpoints.down('xs')]: {
+                width:'100vw',
+              },
         },
         autocomplete: {
-            maxWidth: '80vw',
             width: 350,
+            [theme.breakpoints.down('xs')]: {
+                width:'95%',
+              },
         },
         searchIcon: {
             opacity: 0.5
@@ -91,7 +94,7 @@ export const Search = () => {
 
 
     return (
-        <div>
+        <div className={classes.root}>
             <Autocomplete
                 id="fritekstsok-demo"
                 options={adressOptions}
