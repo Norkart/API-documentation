@@ -65,9 +65,6 @@ const matrikkelkartResponseToTeiger = async (
   const json = (await apiResult.json()) as MatrikkelkartResponse;
   let teig = json.Teiger.filter(t => t.HovedTeig)[0] ?? json.Teiger[0]
 
-  console.log('t', teig)
-  console.log(json)
-
   if (teig === null) return null;
 
   return {
