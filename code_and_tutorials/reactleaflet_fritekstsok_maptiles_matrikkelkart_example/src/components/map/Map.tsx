@@ -15,7 +15,7 @@ export const Map = () => {
     return (
         <div>
             {apikey &&
-                <MapContainer style={{ height: '100vh', width: '100vw' }} center={latlngOrDefault} zoomControl={false} zoom={16} scrollWheelZoom={true}>
+                <MapContainer style={{ height: '100vh', width: '100vw' }} center={latlngOrDefault} zoomControl={false} zoom={4} scrollWheelZoom={true}>
                     <Suspense fallback={<div></div>}>
                         <TileLayer
                             url={`https://waapi.webatlas.no/maptiles/tiles/webatlas-standard-hybrid/wa_grid/{z}/{x}/{y}.jpeg?APITOKEN=${apikey}`}
