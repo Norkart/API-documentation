@@ -1,5 +1,6 @@
+import { Geometry } from "geojson";
 import { atom, selector } from "recoil";
-import { getTeigByCoordinate } from "../utils/matrikkelkartapi";
+import { matrikkelkartGetTeiger } from "../api/matrikkelkartapi";
 
 export interface Address {
   id: string;
@@ -15,7 +16,13 @@ export interface LatLng {
 
 export interface Teig {
     Matrikkelnummer: string,
-    Geometri: any
+    Geometry: Geometry,
+    Kommunenummer: number,
+    Gaardsnummer: number;
+    Bruksnummer: number;
+    Festenummer: number;
+    Seksjonsnummer: number;
+    BeregnetAreal: number;
 }
 
 export const apiKey = atom<string | null>({
@@ -28,7 +35,7 @@ export const selectedAddress = atom<Address | null>({
   default: null,
 });
 
-export const selectedTeig = selector<Teig[] | null>({
+export const selectedTeig = selector<Teig | null>({
     key: "selectedTeig",
     get: async ({get}) => {      
 
@@ -36,16 +43,7 @@ export const selectedTeig = selector<Teig[] | null>({
       const key = get(apiKey);
      
       if (address && key) {
-        const apiResult = await getTeigByCoordinate(address.latlng, key);
-        const json = await apiResult.json();
-        const enheter = new Array<Teig>();
-        json.Teiger.forEach((teig: any) => {
-          enheter.push({
-            Matrikkelnummer: teig.Matrikkelnummer,
-            Geometri: teig.Geometri
-          });
-        });
-        return enheter;
+        return await matrikkelkartGetTeiger(address.latlng, key);
       } 
       return null;
     },

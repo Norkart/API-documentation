@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import { MapContainer, TileLayer, ZoomControl } from "react-leaflet"
 import { useRecoilValue } from "recoil"
 import { apiKey, selectedAddress} from "../../state/state"
-import { MapLayers } from "../MapLayers"
+import { MapLayers } from "./MapLayers"
 import { TopLeftMapControl } from "./TopLeftMapControl"
 
 
