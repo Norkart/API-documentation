@@ -47,7 +47,7 @@ export const BaseLayerControl = () => {
                     <LayersControl.BaseLayer key={l.Name} checked name={l.Name}>
                         <TileLayer
                             url={`https://waapi.webatlas.no/maptiles/tiles/${l.Tileset}/wa_grid/{z}/{x}/{y}.${l.Ext}?APITOKEN=${apikey}`}
-                            attribution={`Norkart`}
+                            attribution={`Norkart. Source code: <a href="https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example">github</a>`}
                         />
                     </LayersControl.BaseLayer>))}
             </LayersControl>

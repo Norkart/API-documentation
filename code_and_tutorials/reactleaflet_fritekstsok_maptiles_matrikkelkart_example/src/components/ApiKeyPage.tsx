@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export const ApiKey = () => {
+export const ApiKeyPage = () => {
     const classes = useStyles();
     const [key, setKey] = useRecoilState<string | null>(apiKey);
     const handleTextfieldChange = (e: any) => {
@@ -97,7 +97,7 @@ export const ApiKey = () => {
 
 
             <Typography className={classes.sourcecode} variant='caption' color='secondary'>
-                Source code: <a href="https://github.com/Norkart/API-documentation/tree/onehour1006/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example">github</a>
+                Source code: <a href="https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example">github</a>
             </Typography>
             
         </div>
