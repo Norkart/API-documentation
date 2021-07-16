@@ -12,7 +12,7 @@ export const Map = () => {
     const apikey = useRecoilValue(apiKeyState);
     const center = { lat: 63.5, lng: 10.5}; 
     //hack for full height in mobile browsers.
-    const [mapHeight, setmapHeight] = useState<'100vh' | number>('100vh') 
+    const [mapHeight, setmapHeight] = useState<'100vh' | number>(window.innerHeight) 
 
     const onResize = throttle(() => {
         console.log('call')
