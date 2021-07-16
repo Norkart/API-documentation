@@ -15,7 +15,7 @@ https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslo&S
 
 Example response
 
-```
+```json
 {
     "Text": "Oslo",
     "Options": [
@@ -51,8 +51,6 @@ Example response
 The ```Url``` field in the response contains the search endpoint where you more detailed information over the address in question.  
 
 
-## Getting started
+## Code examples and tutorials
 
-Link to [code_and_tutorial]() 
-
-Description / links
+- [React Example:](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.

@@ -4,12 +4,11 @@ This is our collection of developer documentation, examples and tutorials for se
 
 See [code and tutorials](code_and_tutorials) for complete list of code-snippets, examples and tutorials.
 
-Documented API's:
+## Documented API's:
 
 * [API-maptiles](API-maptiles)
-* [~~API-fritekstsok~~](API-fritekstsok)
+* [API-fritekstsok](API-fritekstsok)
 * [~~API-matrikkelkart~~](API-matrikkelkart)
-
 
 
 ## About API's
@@ -31,6 +30,9 @@ Read more at [API-maptiles](API-maptiles)
 ## Authentication
 Authentication works in the same way for all services. 
 - Example: ```https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslovei&api_key={{YOUR_API_KEY}}```
+
+## Live Demos
+- [https://mango-flower-0fd4d4b03.azurestaticapps.net/](https://mango-flower-0fd4d4b03.azurestaticapps.net/): Here you can see a minimalistic map application that uses maptiles, fritekstsøk and matrikkelkart APIs. You will need an API key to unlock the app. Get a free trial key by logging in with your github account at [https://developer.norkart.no/](https://developer.norkart.no/)
 
 
 
