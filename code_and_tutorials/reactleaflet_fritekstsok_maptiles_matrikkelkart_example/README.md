@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Maptiles, Fritekstsøk and Matrikkelkart API Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Go to the [Live demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/).
 
-## Available Scripts
+This is a demo of Norkart's maptiles, search and 'matrikkelkart' APIs. In this simple app, you can:
+- Search for an address in Norway and see the geometry for your selected property.
+- Click on the geometry to see more information about the property.
+- Change between norkart's various maptiles. 
 
-In the project directory, you can run:
+## API Key
+In order to see the demo or use these APIs in your own projects, you will first need an API key. Norkart provides a free trial API key, which you can get by logging in with your github account at [Norkart Developer](https://developer.norkart.no/).
 
-### `yarn start`
+## Built With
+- Typescript - Language.
+- [React](https://reactjs.org//) - Front end library.
+- [Recoil](https://recoiljs.org/) - For state management.
+- [Leaflet](https://leafletjs.com/) - For rendering the interactive map.
+- [React Leaflet](https://react-leaflet.js.org/) - For integrating leaflet with react.
+- [Material-UI](https://material-ui.com/) - For design system and components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run Locally
+This is a react app. To run it locally you will need to use npm or yarn to install packages and run the app.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About the code
+### Maptiles
+In the demo, you can view the different map tile layers that Norkart serves by using the layer control in the bottom left corner. see the file called ` BaseLayerControl.tsx` to see how this is implemented.
 
-### `yarn test`
+- [Maptiles Documentation](https://github.com/Norkart/API-documentation/blob/main/API-maptiles/README.md)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Address Search
+Norkart fritekstsøk is used to look up addresses in Norway. Check out `fritekstsokapi.ts` to see the expected return type how you can query the api from javascript.
 
-### `yarn build`
+- [Fritekstsøk Documentation](https://github.com/Norkart/API-documentation/tree/main/API-fritekstsok)
+- [Fritekstsøk Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Matrikkelkart
+Norkart matrikkelkart is used in this demo to query the geometry (teig) for the selected address. See `matrikkelkartapi.ts` for the expected return type how you can query the api from javascript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Matrikkelkart Swagger](https://www.webatlas.no/WAAPI-Matrikkelkart/swagger-ui/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

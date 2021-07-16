@@ -44,7 +44,7 @@ export const BaseLayerControl = () => {
         <div>
             <LayersControl position="bottomleft">
                 {layers.map(l => (
-                    <LayersControl.BaseLayer checked name={l.Name}>
+                    <LayersControl.BaseLayer key={l.Name} checked name={l.Name}>
                         <TileLayer
                             url={`https://waapi.webatlas.no/maptiles/tiles/${l.Tileset}/wa_grid/{z}/{x}/{y}.${l.Ext}?APITOKEN=${apikey}`}
                             attribution={`Norkart`}
