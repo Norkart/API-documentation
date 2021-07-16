@@ -14,7 +14,7 @@ export const Map = () => {
     const latlngOrDefault = address ? address.latlng : { lat: 63.426891, lng: 10.396416 };
 
     return (
-        <div style={{ height: '100vh' }} >
+        <div style={{ height: '100%' }} >
             {apikey &&
                 <MapContainer style={{ height: '100%', width: '100vw' }} center={latlngOrDefault} zoomControl={false} zoom={4} scrollWheelZoom={true}>
                     <Suspense fallback={<div></div>}>
