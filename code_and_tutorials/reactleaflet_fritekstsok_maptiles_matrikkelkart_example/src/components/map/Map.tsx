@@ -2,14 +2,14 @@ import { throttle } from "lodash"
 import { Suspense, useEffect, useState } from "react"
 import { MapContainer, ZoomControl } from "react-leaflet"
 import { useRecoilValue } from "recoil"
-import { apiKey } from "../../state/state"
+import { apiKeyState } from "../../state/state"
 import { BaseLayerControl } from "./BaseLayerControl"
 import { MapLayers } from "./MapLayers"
 import { TopLeftMapControl as SearchControl } from "./SearchControl"
 
 
 export const Map = () => {
-    const apikey = useRecoilValue(apiKey);
+    const apikey = useRecoilValue(apiKeyState);
     const center = { lat: 63.5, lng: 10.5}; 
     //hack for full height in mobile browsers.
     const [mapHeight, setmapHeight] = useState<'100vh' | number>('100vh') 
@@ -26,10 +26,12 @@ export const Map = () => {
         }
     }, [onResize])
 
+    console.log(apikey)
+
     return (
-        <div style={{ height: mapHeight}} >
+        <div >
             {apikey &&
-                <MapContainer style={{ height: '100%', width: '100vw' }} center={center} zoomControl={false} zoom={5} scrollWheelZoom={true}>
+                <MapContainer style={{ height: mapHeight, width: '100vw' }} center={center} zoomControl={false} zoom={5} scrollWheelZoom={true}>
                     <Suspense fallback={<div></div>}>
                         <MapLayers />
                         <SearchControl />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ApiKeyPage } from './components/ApiKeyPage'
 import './App.css';
 import { Map } from './components/map/Map';
@@ -24,8 +23,8 @@ function App() {
     <div className="App">
       <RecoilRoot>
         <ThemeProvider theme={theme}>
-          <ApiKeyPage />
-          <Map />
+           <Map />
+           <ApiKeyPage/>
         </ThemeProvider>
       </RecoilRoot>
     </div>

@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { apiKey } from '../state/state'
+import { apiKeyState } from '../state/state'
 import { Button, createStyles, makeStyles, TextField, Theme, Typography } from '@material-ui/core';
 
 
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export const ApiKeyPage = () => {
     const classes = useStyles();
-    const [key, setKey] = useRecoilState<string | null>(apiKey);
+    const [key, setKey] = useRecoilState<string | null>(apiKeyState);
     const handleTextfieldChange = (e: any) => {
         if (e.target.value.length === 36) {
             setKey(e.target.value);

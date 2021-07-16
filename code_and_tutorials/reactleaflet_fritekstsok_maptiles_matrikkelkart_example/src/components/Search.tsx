@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react'
 import { createStyles, InputAdornment, makeStyles, TextField, Theme, withStyles } from '@material-ui/core';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { Address, apiKey, selectedAddress } from '../state/state';
+import { Address, apiKeyState, selectedAddress } from '../state/state';
 import { fritekstsok } from '../api/fritekstsokapi';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import SearchIcon from '@material-ui/icons/Search';
@@ -43,7 +43,7 @@ export const Search = () => {
     const classes = useStyles();
 
 
-    const apiKeyState = useRecoilValue<string | null>(apiKey);
+    const apiKey = useRecoilValue<string | null>(apiKeyState);
     const [selectedAdress, setSelectedAdress] = useRecoilState<Address | null>(selectedAddress);
     const [inputValue, setInputValue] = useState('');
     const [adressOptions, setAdressOptions] = useState<Address[]>([])
@@ -51,12 +51,12 @@ export const Search = () => {
     const fetchFromFritekstsok = useMemo(
         () =>
             debounce(async (input: string, callback: (results: Address[]) => void) => {
-                if (input && apiKeyState) {
-                    const results = await fritekstsok(input, apiKeyState)
+                if (input && apiKey) {
+                    const results = await fritekstsok(input, apiKey)
                     callback(results)
                 }
             }, 100),
-        [apiKeyState],
+        [apiKey],
     );
 
     useEffect(() => {

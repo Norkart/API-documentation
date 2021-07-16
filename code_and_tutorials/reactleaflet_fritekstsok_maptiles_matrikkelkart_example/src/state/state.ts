@@ -25,8 +25,8 @@ export interface Teig {
     BeregnetAreal: number;
 }
 
-export const apiKey = atom<string | null>({
-  key: "apiKey",
+export const apiKeyState = atom<string | null>({
+  key: "apiKeyState",
   default: "",
 });
 
@@ -40,7 +40,7 @@ export const selectedTeig = selector<Teig | null>({
     get: async ({get}) => {      
 
       const address = get(selectedAddress);
-      const key = get(apiKey);
+      const key = get(apiKeyState);
      
       if (address && key) {
         return await matrikkelkartGetTeiger(address.latlng, key);

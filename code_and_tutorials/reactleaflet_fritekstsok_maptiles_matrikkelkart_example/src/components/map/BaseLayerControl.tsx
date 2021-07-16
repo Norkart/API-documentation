@@ -1,7 +1,7 @@
 
 import { LayersControl, TileLayer } from 'react-leaflet'
 import { useRecoilValue } from 'recoil';
-import { apiKey } from '../../state/state';
+import { apiKeyState } from '../../state/state';
 
 const layers = [
     {
@@ -37,7 +37,7 @@ const layers = [
 ]
 
 export const BaseLayerControl = () => {
-    const apikey = useRecoilValue(apiKey);
+    const apikey = useRecoilValue(apiKeyState);
     const defaultLayer = 'vector';
 
     return (
