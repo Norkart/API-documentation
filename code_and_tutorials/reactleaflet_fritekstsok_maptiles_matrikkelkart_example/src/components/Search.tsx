@@ -11,7 +11,6 @@ const CustomTextField = withStyles((theme: Theme) => ({
     root: {
         backgroundColor: 'white',
         borderRadius: 10,
-
         '& .MuiInputBase-root': {
             paddingRight: `${theme.spacing(2)}px !important`,
         },

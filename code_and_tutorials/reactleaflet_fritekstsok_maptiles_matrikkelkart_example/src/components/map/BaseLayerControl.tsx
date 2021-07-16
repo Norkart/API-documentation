@@ -1,5 +1,4 @@
 
-import { makeStyles, Theme, createStyles } from '@material-ui/core';
 import { LayersControl, TileLayer } from 'react-leaflet'
 import { useRecoilValue } from 'recoil';
 import { apiKey } from '../../state/state';
@@ -37,22 +36,12 @@ const layers = [
     }
 ]
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({        
-        root: {
-            textAlign: 'left',
-        }
-    }),
-);
-
-
 export const BaseLayerControl = () => {
     const apikey = useRecoilValue(apiKey);
-    const classes = useStyles();
 
 
     return (
-        <div className={classes.root}>
+        <div>
             <LayersControl position="bottomleft">
                 {layers.map(l => (
                     <LayersControl.BaseLayer checked name={l.Name}>
@@ -61,7 +50,6 @@ export const BaseLayerControl = () => {
                             attribution={`Norkart`}
                         />
                     </LayersControl.BaseLayer>))}
-
             </LayersControl>
         </div>
     )
