@@ -11,9 +11,11 @@ import { TopLeftMapControl as SearchControl } from "./SearchControl"
 export const Map = () => {
     const apikey = useRecoilValue(apiKey);
     const center = { lat: 63.5, lng: 10.5}; 
-    const [mapHeight, setmapHeight] = useState<'100vh' | number>('100vh') //hack for full height in mobile browsers.
+    //hack for full height in mobile browsers.
+    const [mapHeight, setmapHeight] = useState<'100vh' | number>('100vh') 
 
     const onResize = throttle(() => {
+        console.log('call')
         setmapHeight(window.innerHeight);
     }, 200)
 
@@ -22,7 +24,7 @@ export const Map = () => {
         return () => {
             window.removeEventListener('resize', onResize);
         }
-    }, [])
+    }, [onResize])
 
     return (
         <div style={{ height: mapHeight}} >
