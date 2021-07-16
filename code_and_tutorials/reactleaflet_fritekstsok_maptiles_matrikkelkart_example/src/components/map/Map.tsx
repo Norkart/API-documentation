@@ -5,7 +5,7 @@ import { apiKey, selectedAddress } from "../../state/state"
 import { BaseLayerControl } from "./BaseLayerControl"
 import { MapLayers } from "./MapLayers"
 import { TopLeftMapControl as SearchControl } from "./SearchControl"
-
+import 'leaflet/dist/leaflet.css';
 
 export const Map = () => {
     const address = useRecoilValue(selectedAddress);
@@ -16,7 +16,7 @@ export const Map = () => {
     return (
         <div style={{ height: '100%' }} >
             {apikey &&
-                <MapContainer style={{ height: '100%', width: '100vw' }} center={latlngOrDefault} zoomControl={false} zoom={4} scrollWheelZoom={true}>
+                <MapContainer style={{ height: '100%', width: '100vw' }} center={latlngOrDefault} zoomControl={false} zoom={5} scrollWheelZoom={true}>
                     <Suspense fallback={<div></div>}>
                         <MapLayers />
                         <SearchControl />
