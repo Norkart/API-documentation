@@ -38,13 +38,13 @@ const layers = [
 
 export const BaseLayerControl = () => {
     const apikey = useRecoilValue(apiKey);
-
+    const defaultLayer = 'vector';
 
     return (
         <div>
             <LayersControl position="bottomleft">
                 {layers.map(l => (
-                    <LayersControl.BaseLayer key={l.Name} checked name={l.Name}>
+                    <LayersControl.BaseLayer key={l.Name} checked={l.Name === defaultLayer} name={l.Name}>
                         <TileLayer
                             url={`https://waapi.webatlas.no/maptiles/tiles/${l.Tileset}/wa_grid/{z}/{x}/{y}.${l.Ext}?APITOKEN=${apikey}`}
                             attribution={`Norkart. Source code: <a href="https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example">github</a>`}
