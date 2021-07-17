@@ -2,9 +2,10 @@ import React from 'react';
 import { ApiKeyPage } from './components/ApiKeyPage'
 import './App.css';
 import { Map } from './components/map/Map';
-import { RecoilRoot } from 'recoil';
 import bluegrey from '@material-ui/core/colors/blueGrey';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { useRecoilValue } from 'recoil';
+import { apiKey } from './state/state';
 
 const theme = createMuiTheme({
   palette: {
@@ -20,14 +21,16 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  const apikey = useRecoilValue(apiKey);
+
   return (
     <div className="App">
-      <RecoilRoot>
-        <ThemeProvider theme={theme}>
-          <ApiKeyPage />
-          <Map />
-        </ThemeProvider>
-      </RecoilRoot>
+      <ThemeProvider theme={theme}>
+        {apikey
+          ? <Map />
+          : <ApiKeyPage />
+        }
+      </ThemeProvider>
     </div>
   );
 }
