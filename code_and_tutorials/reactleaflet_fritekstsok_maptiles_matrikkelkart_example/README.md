@@ -26,10 +26,10 @@ This is a react app. To run it locally you will need to use npm or yarn to insta
 In the demo, you can view the different map tile layers that Norkart serves by using the layer control in the bottom left corner. see the file called ` BaseLayerControl.tsx` to see how this is implemented.
 
 ### Address Search
-Norkart fritekstsøk is used to look up addresses in Norway. Check out `fritekstsokapi.ts` to see the expected return type how you can query the api from javascript.
+Norkart fritekstsøk is used to look up addresses in Norway. Check out `fritekstsokapi.ts` to see the expected return type and how you can query the api from javascript.
 
 ### Matrikkelkart
-Norkart matrikkelkart is used in this demo to query the geometry (teig) for the selected address. See `matrikkelkartapi.ts` for the expected return type how you can query the api from javascript.
+Norkart matrikkelkart is used in this demo to query the geometry (teig) for the selected address. See `matrikkelkartapi.ts` for the expected return type and how you can query the api from javascript.
 
 
 ## Relevant Documentation and Links
