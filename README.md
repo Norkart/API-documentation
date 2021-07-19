@@ -8,7 +8,7 @@ See [code and tutorials](code_and_tutorials) for complete list of code-snippets,
 
 * [API-maptiles](API-maptiles)
 * [API-fritekstsok](API-fritekstsok)
-* [~~API-matrikkelkart~~](API-matrikkelkart)
+* [API-matrikkelkart](API-matrikkelkart)
 
 ## About API's
 Norkarts services are mostly ```REST-services``` which support data-exchange in JSON, XML and ServiceStack CSV-format. Where ```JSON is the reccomendation```.
