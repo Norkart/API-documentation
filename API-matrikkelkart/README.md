@@ -5,7 +5,7 @@ MatrikkelKart API exposes geographic information about Matrikkelenheter and Teig
 Swagger: [Matrikkelkart-Swagger](https://www.webatlas.no/WAAPI-Matrikkelkart/swagger-ui/)
 
 ## Example: Get matrikkel information by coordinate
-To get matrikkel information for the a point with coordinates: latitude: 63.4267428, altitude: 10.3981875
+To get matrikkel information for the a point with coordinates: latitude: 63.4267428, longitude: 10.3981875
 
 ### Request
 
