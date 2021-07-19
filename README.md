@@ -26,14 +26,15 @@ There are two types of map services:
 Read more at [API-maptiles](API-maptiles)
 
 
-## Authentication
+## Authentication / API key 
 Authentication works in the same way for all services. 
 - Example: ```https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslovei&api_key={{YOUR_API_KEY}}```
+
+Get a free trial key by logging in with your github account at [https://developer.norkart.no/](https://developer.norkart.no/)
 
 ## Live Demos
 - [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/): Here you can see a minimalistic map application that uses maptiles, fritekstsøk and matrikkelkart APIs. 
 
-## API Key
-You will need an API key to access norkart's APIs. Get a free trial key by logging in with your github account at [https://developer.norkart.no/](https://developer.norkart.no/)
+
 
 
