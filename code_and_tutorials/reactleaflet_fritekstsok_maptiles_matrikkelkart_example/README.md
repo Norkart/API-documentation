@@ -23,18 +23,18 @@ This is a react app. To run it locally you will need to use npm or yarn to insta
 
 ## About the code
 ### Maptiles
-In the demo, you can view the different map tile layers that Norkart serves by using the layer control in the bottom left corner. see the file called ` BaseLayerControl.tsx` to see how this is implemented.
+In the demo, you can view the different map tile layers that Norkart serves by using the layer control in the bottom left corner. see the file called [`BaseLayerControl.tsx`](./../reactleaflet_fritekstsok_maptiles_matrikkelkart_example/src/components/map/BaseLayerControl.tsx) to see how this is implemented.
 
 ### Address Search
-Norkart fritekstsøk is used to look up addresses in Norway. Check out `fritekstsokapi.ts` to see the expected return type and how you can query the api from javascript.
+Norkart fritekstsøk is used to look up addresses in Norway. Check out [`fritekstsokapi.ts`](./../reactleaflet_fritekstsok_maptiles_matrikkelkart_example/src/api/fritekstsokapi.ts) to see the expected return type and how you can query the api from javascript.
 
 ### Matrikkelkart
-Norkart matrikkelkart is used in this demo to query the geometry (teig) for the selected address. See `matrikkelkartapi.ts` for the expected return type and how you can query the api from javascript.
+Norkart matrikkelkart is used in this demo to query the geometry (teig) for the selected address. See [`matrikkelkartapi.ts`](./../reactleaflet_fritekstsok_maptiles_matrikkelkart_example/src/api/matrikkelkartapi.ts) for the expected return type and how you can query the api from javascript.
 
 
 ## Relevant Documentation and Links
-- [Maptiles Documentation](https://github.com/Norkart/API-documentation/blob/main/API-maptiles/README.md)
-- [Fritekstsøk Documentation](https://github.com/Norkart/API-documentation/tree/main/API-fritekstsok)
+- [Maptiles Documentation](./../../API-maptiles)
+- [Fritekstsøk Documentation](./../../API-fritekstsok)
 - [Fritekstsøk Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/)
 - [Matrikkelkart Swagger](https://www.webatlas.no/WAAPI-Matrikkelkart/swagger-ui/)
 
