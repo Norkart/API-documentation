@@ -10,7 +10,6 @@ See [code and tutorials](code_and_tutorials) for complete list of code-snippets,
 * [API-fritekstsok](API-fritekstsok)
 * [~~API-matrikkelkart~~](API-matrikkelkart)
 
-
 ## About API's
 Norkarts services are mostly ```REST-services``` which support data-exchange in JSON, XML and ServiceStack CSV-format. Where ```JSON is the reccomendation```.
 
@@ -32,8 +31,9 @@ Authentication works in the same way for all services.
 - Example: ```https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslovei&api_key={{YOUR_API_KEY}}```
 
 ## Live Demos
-- [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/): Here you can see a minimalistic map application that uses maptiles, fritekstsøk and matrikkelkart APIs. You will need an API key to unlock the app. Get a free trial key by logging in with your github account at [https://developer.norkart.no/](https://developer.norkart.no/)
+- [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/): Here you can see a minimalistic map application that uses maptiles, fritekstsøk and matrikkelkart APIs. 
 
-
+## API Key
+You will need an API key to access norkart's APIs. Get a free trial key by logging in with your github account at [https://developer.norkart.no/](https://developer.norkart.no/)
 
 

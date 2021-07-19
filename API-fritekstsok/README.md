@@ -7,13 +7,14 @@ Swagger: [Fritekstsok-Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger
 
 The ```suggest/matrikkel/adresse``` endpoint, returns a list of address suggestions based on the ```Query``` parameter, where you can limit the size of the returned list by the ```Size``` parameter. 
 
-Example request
+### Example request
 
 ```
+GET
 https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslo&Size=1&api_key={{YOUR_API_KEY}}
 ```
 
-Example response
+### Example response
 
 ```json
 {
