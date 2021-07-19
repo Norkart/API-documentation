@@ -4,9 +4,7 @@ Relevant code-examples
 
 * [CodePen example of Maptiles in Leaflet.js](https://codepen.io/alexanno/pen/EzrjEb)
 * [Code for the tutorial below](./Kart-Flyfoto)
-
-
-
+* [React Example](./../reactleaflet_fritekstsok_maptiles_matrikkelkart_example)
 
 
 # Step by step guide
