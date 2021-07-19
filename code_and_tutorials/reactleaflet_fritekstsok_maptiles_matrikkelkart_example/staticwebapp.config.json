@@ -1,0 +1,11 @@
+{
+    "navigationFallback": {
+      "rewrite": "/index.html"
+    },
+    "routes": [
+      {
+        "route": "/wmsoverlay",
+        "rewrite": "https://raw.githubusercontent.com/Norkart/API-documentation/main/code_and_tutorials/getting%20started%20-%20maptiles%20in%20leaflet.js/Kart-Flyfoto/index.html"
+      }
+    ]
+  }
