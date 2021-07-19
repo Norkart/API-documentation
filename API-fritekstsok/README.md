@@ -53,4 +53,4 @@ The ```Url``` field in the response contains the search endpoint where you more 
 
 ## Code examples and tutorials
 
-- [React Example:](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
+- [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
