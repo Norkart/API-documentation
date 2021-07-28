@@ -118,7 +118,7 @@ export const Search = () => {
                         color="secondary"
                         id="standard-basic"
                         variant="outlined"
-                        placeholder="Search Adress"
+                        placeholder="Search Address"
                         size="small"
                         InputProps={{
                             ...params.InputProps,
