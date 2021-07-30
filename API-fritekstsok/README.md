@@ -1,5 +1,5 @@
 # API-Fritekstsok
-Fritekstsok is the search service from Norkart, which holds the most updated addresses in Norway.  
+Fritekstsok exposes the most updated addresses in Norway.  
 
 Swagger: [Fritekstsok-Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/)
 
