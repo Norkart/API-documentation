@@ -1,7 +1,7 @@
-# Custom search for municipalities
+# HowTo: Customize search for municipalities.
 In some cases you may need to restrict your search to one or more municipalities, which is possible through the ```suggest/kommunecustom``` endpoint.
 
-Swagger documentation: [Kommunecustom-Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/#!/suggest/CustomKommuneSuggestionRequestkommunecustom_Get)
+Swagger documentation: [Kommunecustom](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/#!/suggest/CustomKommuneSuggestionRequestkommunecustom_Get)
 
 ## Example
 In this example we will search for ```street addresses``` by the letter ```N``` within ```Hemsedal```. 
@@ -9,8 +9,8 @@ In this example we will search for ```street addresses``` by the letter ```N``` 
 #### Parameters:
 * ```Query```: N 
 * ```Size```: 2 
-* ```Targets```: gateadresse (we only want to target street addresses) 
-* ```KommuneLimit```: 3042 (Hemsadal)
+* ```Targets```: gateadresse (only street addresses) 
+* ```KommuneLimit```: 3042 (Hemsedal)
 
 ### Example request
 ```
