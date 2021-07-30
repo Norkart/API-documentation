@@ -7,18 +7,18 @@ Swagger: [Fritekstsok-Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger
 - [Getting Started](./../code_and_tutorials/getting%20started%20-%20fritekstsok)
 - [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
 
-## Example of address search
+## Example: Get address suggestions by query
 
 The ```suggest/matrikkel/adresse``` endpoint, returns a list of address suggestions based on the ```Query``` parameter, where you can limit the size of the returned list by the ```Size``` parameter. 
 
-### Example request
+### Request
 
 ```
 GET
 https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslo&Size=1&api_key={{YOUR_API_KEY}}
 ```
 
-### Example response
+### Response
 
 ```json
 {

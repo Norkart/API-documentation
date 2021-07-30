@@ -76,8 +76,4 @@ https://www.webatlas.no/WAAPI-FritekstSok/suggest/kommunecustom?Query=Svøovegen
 The ```Url``` field in the response contains the search endpoint where you will get more detailed information over the address in question.  
 
 
-## Code examples and tutorials
-- [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo the kommunecustom search is used with no municipality restrictions.
-
-
 
