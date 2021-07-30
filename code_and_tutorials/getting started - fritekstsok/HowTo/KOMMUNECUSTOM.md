@@ -1,5 +1,5 @@
 # HowTo: Refine search for municipalities.
-In some cases you may need to restrict your search to one or more municipalities, which is possible through the ```suggest/kommunecustom``` endpoint.
+In some cases you may not want to search all the addresses of Norway. Instead you may want to restrict your search to one or more municipalities, which is possible through the ```suggest/kommunecustom``` endpoint.
 
 Swagger documentation: [Kommunecustom](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/#!/suggest/CustomKommuneSuggestionRequestkommunecustom_Get)
 
