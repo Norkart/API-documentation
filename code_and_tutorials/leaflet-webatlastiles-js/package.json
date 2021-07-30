@@ -1,0 +1,10 @@
+{
+  "name": "leaflet-webatlastiles-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.7.1",
+    "leaflet-webatlastile": "2.1.0"
+  }
+}
