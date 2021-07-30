@@ -1,4 +1,4 @@
-# HowTo: Customize search for municipalities.
+# HowTo: Refine search for municipalities.
 In some cases you may need to restrict your search to one or more municipalities, which is possible through the ```suggest/kommunecustom``` endpoint.
 
 Swagger documentation: [Kommunecustom](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/#!/suggest/CustomKommuneSuggestionRequestkommunecustom_Get)
