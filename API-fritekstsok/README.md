@@ -3,7 +3,11 @@ Fritekstsok is the search service from Norkart, which holds the most updated add
 
 Swagger: [Fritekstsok-Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/)
 
-## Example of a simple street address search.
+## Code examples and tutorials
+- [Getting Started](./../code_and_tutorials/getting%20started%20-%20fritekstsok)
+- [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
+
+## Example of address search
 
 The ```suggest/matrikkel/adresse``` endpoint, returns a list of address suggestions based on the ```Query``` parameter, where you can limit the size of the returned list by the ```Size``` parameter. 
 
@@ -50,8 +54,3 @@ https://www.webatlas.no/WAAPI-FritekstSok/suggest/matrikkel/adresse?Query=Oslo&S
 ```
 
 The ```Url``` field in the response contains the search endpoint where you more detailed information over the address in question.  
-
-
-## Code examples and tutorials
-
-- [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
