@@ -1,6 +1,5 @@
 # How to contribute
-
-
+Any contribution is appreciated. In order to contribute, create a pull request to the main branch of this repository. 
 
 ## API-documentation
 
