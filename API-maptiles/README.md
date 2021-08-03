@@ -29,13 +29,13 @@ options: {
 Log in at [developer.norkart.no](developer.norkart.no) to get a trial api-key.
 
 
-### Plugin for Leaflet.js
+### Leaflet.js Plugin
 
-We provide a plugin for handling attribution and URL-endpoints for Leaflet.js. You can find details and code here: 
+We provide an open source plugin for handling attribution and URL-endpoints for Leaflet.js via NPM. This plugin supports both Javascript and Typescript.
 
-* https://github.com/Norkart/L.TileLayer.Webatlas/
-
-
+* Code: https://github.com/Norkart/L.TileLayer.Webatlas
+* Package: https://www.npmjs.com/package/leaflet-webatlastile
+* [Example code](../code_and_tutorials/leaflet-webatlastiles-js)
 
 ### Usage in other libraries / desktop systems
 
@@ -44,6 +44,7 @@ For use in other libraries or desktop systems - please refer to the url-schemes 
 ### Code examples and tutorials
 
 * [getting started - maptiles in leaflet.js](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/getting%20started%20-%20maptiles%20in%20leaflet.js)
-* [getting started - maptiles in leaflet.js](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/getting%20started%20-%20maptiles%20in%20mapbox.gl)
+* [getting started - maptiles in mapbox.gl](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/getting%20started%20-%20maptiles%20in%20mapbox.gl)
 * [getting started - fritekstsok](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/getting%20started%20-%20wms-overlays%20in%20leaflet.js)
 - [React Example:](https://github.com/Norkart/API-documentation/tree/main/code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see maptiles used in combination with fritekstsok and matrikkelkart in a simple React application.
+- [Leaflet-webatlastile example](../code_and_tutorials/leaflet-webatlastiles-js)
