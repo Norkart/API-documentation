@@ -40,7 +40,7 @@ REACT_APP_MAPTILES_PROVIDER_URL=
 - Map bounds are used to determine where to render the map in case of a map swich. 
 - [`MapOrchestrator.tsx`](./src/components/MapOrchestrator.tsx) holds the bounds state, so it can be updated fromm either the Leaflet or Cesium component.
 - For Leaflet, bounds are updated in [`EventHanlder.tsx`](./src/components/Leaflet/EventHanlder.tsx)
-- For Cesium, bounds are updated in [`CamreaPosition.tsx`](./src/components/Cesium/CameraPosition.tsx)
+- For Cesium, bounds are updated in [`CameraPosition.tsx`](./src/components/Cesium/CameraPosition.tsx)
 
 ### Webpack
 The following guides have been used to build the webpack.config file:
