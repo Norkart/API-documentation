@@ -1,8 +1,8 @@
 # Using Cesium and leaflet combined in React. 
-This example shows how to use Cesium and Leaflet, and how to swich between the views in React.
+This example shows how to use Cesium and Leaflet, and how to swich between the map views in React.
 
 ## API Key
-This example uses several of Norkart's services:
+This example uses the following of Norkart's services:
 - Norkart Maptiles
 - Norkart 3D tiles (for terrain, imagery and buildings in Norway).
 
@@ -13,7 +13,6 @@ This example uses several of Norkart's services:
 ## Built With
 - Typescript - Language.
 - [React](https://reactjs.org//) - Front end library.
-- [Recoil](https://recoiljs.org/) - For state management.
 - [Leaflet](https://leafletjs.com/) - For rendering the interactive map.
 - [React Leaflet](https://react-leaflet.js.org/) - For integrating leaflet with react.
 - [Material-UI](https://material-ui.com/) - For design system and components.
@@ -32,17 +31,13 @@ REACT_APP_MAPTILES_PROVIDER_URL=
 ```
 
 ## About the code  
-This code shows an example of how to swich between Leaflet and Cesium in React. 
-
-### Overview
-
 #### Common components
-- In [`Map.tsx`](./src/components/Map.tsx), you can specify components which we will rendered in both the Leaflet and Cesium view.
-- In this example we send in [`SwitchMode.tsx`](./src/components/SwitchMode.tsx), so we can toggle between the two views.
-- Components are rendered to the map, using [`MapControls.tsx`](./src/components/MapControls.tsx).
+- In [`Map.tsx`](./src/components/Map.tsx), components which will rendered in both the Leaflet and Cesium view are specified.
+- In this example we add the [`SwitchMode.tsx`](./src/components/SwitchMode.tsx) component, so we can toggle between the map views.
+- Components are rendered, using [`MapControls.tsx`](./src/components/MapControls.tsx).
 
 #### Switch view
-- We use map bounds to determine where to render the map in case of a swich. 
+- Map bounds are used to determine where to render the map in case of a map swich. 
 - [`MapOrchestrator.tsx`](./src/components/MapOrchestrator.tsx) holds the bounds state, so it can be updated fromm either the Leaflet or Cesium component.
 - For Leaflet, bounds are updated in [`EventHanlder.tsx`](./src/components/Leaflet/EventHanlder.tsx)
 - For Cesium, bounds are updated in [`CamreaPosition.tsx`](./src/components/Cesium/CameraPosition.tsx)
