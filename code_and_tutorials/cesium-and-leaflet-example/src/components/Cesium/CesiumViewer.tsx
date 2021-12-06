@@ -4,8 +4,6 @@ import { Viewer, Cesium3DTileset } from "resium";
 import tilesetStyle from "./tilesetStyle";
 import terrainProvider from "./terrainprovider";
 import imageryProvider from "./imageryprovider";
-import { useRecoilValue } from "recoil";
-import { apiKey } from "../../state/state";
 
 const houseTilesetUrl = process.env.REACT_APP_3D_TILES_PROVIDER_URL || "";
 
@@ -14,8 +12,6 @@ export interface CleanViewerProps {
 }
 
 export const CesiumViewer: React.FC<CleanViewerProps> = (props) => {  
-  const token = useRecoilValue<string | null>(apiKey);
-
   const handleTilesReady = (tileset: CCesium3DTileset) => {
     tileset.luminanceAtZenith = 0.5;
     tileset.style = tilesetStyle
@@ -41,7 +37,7 @@ export const CesiumViewer: React.FC<CleanViewerProps> = (props) => {
     >
       {props.children}
       <Cesium3DTileset
-          url={`${houseTilesetUrl}${token}`}
+          url={houseTilesetUrl}
           show={true}
           onReady={handleTilesReady}
           dynamicScreenSpaceError
