@@ -4,11 +4,13 @@ This example shows how to use Cesium and Leaflet, and how to swich between the m
 ## API Key
 This example uses the following of Norkart's services:
 - Norkart Maptiles
-- Norkart 3D tiles (for terrain, imagery and buildings in Norway).
+- Norkart 3D tiles
+- Norkart WMS-Høyde(terrain provider for cesium)
+- Norkart WMS-Orto(imagery provider for cesium)
 
 ### How to get keys?
-- For Maptiles a key can be obtained at: [developer.norkart.no](https://developer.norkart.no/)
-- 3D tiles are unfortunally not accessible through the key provided at [developer.norkart.no](https://developer.norkart.no/). Request access [here](https://www.norkart.no/dataoganalyse/). 
+- A test key valid for 30 days can be obtained at: [developer.norkart.no](https://developer.norkart.no/)
+- For questions go [here](https://www.norkart.no/dataoganalyse/). 
  
 ## Built With
 - Typescript - Language.
