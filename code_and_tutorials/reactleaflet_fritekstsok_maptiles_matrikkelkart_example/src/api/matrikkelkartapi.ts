@@ -42,7 +42,7 @@ export const matrikkelkartGetTeiger = async (
   latLng: LatLng,
   key: string
 ): Promise<Teig | null> => {
-  const query = `https://www.webatlas.no/WAAPI-Matrikkelkart/teig/punkt?X=${latLng.lng}&Y=${latLng.lat}&api_key=${key}&GeometryTextFormat=GeoJson`;
+  const query = `https://matrikkelkart.api.norkart.no/teig/punkt?X=${latLng.lng}&Y=${latLng.lat}&api_key=${key}&GeometryTextFormat=GeoJson`;
 
   const apiResult = await fetch(query, {
     headers: {
