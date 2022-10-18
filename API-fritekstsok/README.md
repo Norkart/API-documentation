@@ -7,8 +7,21 @@ Swagger: [Fritekstsok-Swagger](https://fritekstsok.api.norkart.no/swagger-ui/)
 - [Getting Started](./../code_and_tutorials/getting%20started%20-%20fritekstsok)
 - [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
 
-## Example: Get address suggestions by query
+## Recommendations
 
+### Suggest - Autocomplete 
+For autocomplete it is recommended to use the /suggest/kommunecustom endpoint. This endpoint can be used to search multiple targets (depending on what you want to search for), but for most purposes this endpoint should be used with targets=gateadresse. [An example is shown below](#example-get-address-suggestions-by-query)
+[More details about the kommunecustom endpoints](../code_and_tutorials/getting%20started%20-%20fritekstsok/HowTo/KOMMUNECUSTOM.md)
+
+### Search - Gives more information + 'Fuzzy'
+While /suggest/kommunecustom is great for autocomplete purposes, sometimes one wants more information than what this endpoint returns. If this is the case, the search endpoint can be used insead: /search/kommunecustom. This endpoint can be used in the same way as the suggest-endpoint but it is a bit slower and therefore not suitable for autocomplete-purposes. 
+
+Reasons to use this endpoint instead of suggest:
+1. The search endpoint returns more information
+2. The search-endpoint is 'fuzzy'. Meaning: If you are searching for an adress which has the name Huleveien 13, but you set query='Hulevegen 13' you will still get respons from the API. If you do the same 'typo' on the suggest-endpoint, this adress will not be returned. Another way to put it: the search-endpoint is less strict than the suggest-endpoint.
+
+
+## Example: Get address suggestions by query
 The ```suggest/kommunecustom``` endpoint with ```?targets=gateadresse```, returns a list of address suggestions based on the ```Query``` parameter, where you can limit the size of the returned list by the ```Size``` parameter. 
 
 ### Request
@@ -53,4 +66,4 @@ https://fritekstsok.api.norkart.no/suggest/kommunecustom?targets=gateadresse&Que
 
 ```
 
-The ```Url``` field in the response contains the search endpoint where you more detailed information over the address in question.  
+The ```Url``` field in the response contains the search endpoint where you get more detailed information over the address in question.  
