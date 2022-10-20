@@ -35,8 +35,8 @@ Norkart matrikkelkart is used in this demo to query the geometry (teig) for the 
 ## Relevant Documentation and Links
 - [Maptiles Documentation](./../../API-maptiles)
 - [Fritekstsøk Documentation](./../../API-fritekstsok)
-- [Fritekstsøk Swagger](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/)
-- [Matrikkelkart Swagger](https://www.webatlas.no/WAAPI-Matrikkelkart/swagger-ui/)
+- [Fritekstsøk Swagger](https://fritekstsok.api.norkart.no/swagger-ui/)
+- [Matrikkelkart Swagger](https://matrikkelkart.api.norkart.no/swagger-ui/)
 
 ## Screenshot
 ![screenshot](./public/screenshot.png)

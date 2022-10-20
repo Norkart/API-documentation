@@ -32,7 +32,7 @@ interface FritekstsokResponse {
     apiKey: string
   ): Promise<Address[]> {
     if (searchText !== null && searchText !== "") {
-      const query = `https://www.webatlas.no/WAAPI-FritekstSok/suggest/kommunecustom?Query=${searchText}&Size=5&Targets=gateadresse`;
+      const query = `https://fritekstsok.api.norkart.no/suggest/kommunecustom?Query=${searchText}&Size=5&Targets=gateadresse`;
   
       const apiResult = await fetch(query, {
         headers: {

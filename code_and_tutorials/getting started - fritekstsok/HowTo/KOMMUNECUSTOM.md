@@ -1,7 +1,7 @@
 # HowTo: Refine search for municipalities.
 In some cases you may not want to search all the addresses of Norway. Instead you may want to restrict your search to one or more municipalities, which is possible through the ```suggest/kommunecustom``` endpoint.
 
-Swagger documentation: [Kommunecustom](https://www.webatlas.no/WAAPI-FritekstSok/swagger-ui/#!/suggest/CustomKommuneSuggestionRequestkommunecustom_Get)
+Swagger documentation: [Kommunecustom](https://fritekstsok.api.norkart.no/swagger-ui/#!/suggest/CustomKommuneSuggestionRequestkommunecustom_Get)
 
 ## Example
 In this example we will search for ```street addresses``` by the letter ```N``` within ```Hemsedal```. 
@@ -15,7 +15,7 @@ In this example we will search for ```street addresses``` by the letter ```N``` 
 ### Example request
 ```
 GET
-https://www.webatlas.no/WAAPI-FritekstSok/suggest/kommunecustom?Query=Svøovegen&Size=2&Targets=gateadresse&KommuneLimit=3042&api_key={{YOUR_API_KEY}}
+https://fritekstsok.api.norkart.no/suggest/kommunecustom?Query=Svøovegen&Size=2&Targets=gateadresse&KommuneLimit=3042&api_key={{YOUR_API_KEY}}
 ```
 
 ### Example response
@@ -28,7 +28,7 @@ https://www.webatlas.no/WAAPI-FritekstSok/suggest/kommunecustom?Query=Svøovegen
             "Type": "gateadresse",
             "Text": "Nedre Fjellstøllie 13, Hemsedal",
             "Score": 2.1000087E+09,
-            "Url": "https://www.webatlas.no/WAAPI-FritekstSok/data/matrikkel/adresse/gateadresse/30420110000130000000",
+            "Url": "https://fritekstsok.api.norkart.no/data/matrikkel/adresse/gateadresse/30420110000130000000",
             "PayLoad": {
                 "AdresseMatrikkelNummer": "30420007100190000000",
                 "Text": "Nedre Fjellstøllie 13, Hemsedal",
@@ -50,7 +50,7 @@ https://www.webatlas.no/WAAPI-FritekstSok/suggest/kommunecustom?Query=Svøovegen
             "Type": "gateadresse",
             "Text": "Nedre Fjellstøllie 17, Hemsedal",
             "Score": 2.10000832E+09,
-            "Url": "https://www.webatlas.no/WAAPI-FritekstSok/data/matrikkel/adresse/gateadresse/30420110000170000000",
+            "Url": "https://fritekstsok.api.norkart.no/data/matrikkel/adresse/gateadresse/30420110000170000000",
             "PayLoad": {
                 "AdresseMatrikkelNummer": "30420007100230000000",
                 "Text": "Nedre Fjellstøllie 17, Hemsedal",

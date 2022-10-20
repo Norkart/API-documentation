@@ -2,7 +2,7 @@
 
 MatrikkelKart API exposes geographic information about Matrikkelenheter and Teiger. (Matrikkel is the Norwegian cadaster system)
 
-Swagger: [Matrikkelkart-Swagger](https://www.webatlas.no/WAAPI-Matrikkelkart/swagger-ui/)
+Swagger: [Matrikkelkart-Swagger](https://matrikkelkart.api.norkart.no/swagger-ui/)
 
 ## Example: Get matrikkel information by coordinate
 To get matrikkel information for the a point with coordinates: latitude: 63.4267428, longitude: 10.3981875
@@ -11,7 +11,7 @@ To get matrikkel information for the a point with coordinates: latitude: 63.4267
 
 ```
 GET
-https://www.webatlas.no/WAAPI-Matrikkelkart/teig/punkt?X=10.3981875&Y=63.4267428&api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
+https://matrikkelkart.api.norkart.no/teig/punkt?X=10.3981875&Y=63.4267428&api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
 
 ```
 
@@ -63,11 +63,11 @@ To query matrikkel information by matrikkel id, you can either use the 20 digit 
 
 ### By 20 digit matrikkel ID
 ```
-GET http://www.webatlas.no/WAAPI-Matrikkelkart/teig/matrikkelnummer?Matrikkelnummer=50010040000020000000&api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
+GET https://matrikkelkart.api.norkart.no/teig/matrikkelnummer?Matrikkelnummer=50010040000020000000&api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
 ```
 ### By matrikkel ID parts
 ```
-GET http://www.webatlas.no/WAAPI-Matrikkelkart/teig/5001/400/2?api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
+GET https://matrikkelkart.api.norkart.no/teig/5001/400/2?api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
 ```
 In either case, the response will be identical to the example above that queries by coordinate (since this property overlaps with the example coordinate)
 
