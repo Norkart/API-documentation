@@ -24,7 +24,8 @@ There are two types of map services:
 - Tile Map Service (```TMS```):
 - Web Map Service (```WMS```)
 
-Read more at [API-maptiles](API-maptiles)
+Read more about [API-maptiles](API-maptiles)
+Read more about [Web-Map-Services-(WMS)](WMS)
 
 
 ## Authentication / API key 
