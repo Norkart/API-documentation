@@ -66,6 +66,18 @@ To use Norkart wms-sevices in QGIS or ArcGIS, you must provide the api key. This
 ### ArcGIS
 ![how-to-use-in-arcgis](./images/arcgis_config.png)
 
+### Other desktop viewers
+Gemini and other software have issues adding the &api_key to the URL, so you might want to try to reverse the order. So instead of:
+
+```
+GET https://waapi.webatlas.no/WMS-Takhelning/?REQUEST=GetCapabilities&SERVICE=WMS&api_key={{API_KEY}}
+```
+
+You can try
+
+```
+GET https://waapi.webatlas.no/WMS-Takhelning/?api_key={{API_KEY}}&REQUEST=GetCapabilities&SERVICE=WMS
+```
 
 ## Useful resources:
 - Wms in leaflet: https://leafletjs.com/examples/wms/wms.html
