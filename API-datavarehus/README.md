@@ -6,6 +6,7 @@ Swagger: [Datavarehus-Swagger](https://datavarehus.api.norkart.no/swagger/index.
 This API in unfortunally not accessible through the key provided at [developer.norkart.no](https://developer.norkart.no/). Request access [here](https://www.norkart.no/dataoganalyse/).
 
 ## Example: Do a intersection query on the traffic volume dataset. 
+(see more examples [here](#more-examples))
 
 Parameters explanation:
 * ```Ids```: List of dataset ids you want to query. 
@@ -150,3 +151,6 @@ BODY
     }
 }
 ```
+
+## More-Examples
+- [kumulesone intersection](./MoreExamples/kumulesone_intersection.md)
