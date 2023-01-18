@@ -14,25 +14,30 @@ https://datavarehus.api.norkart.no/v2/views/sv_norkart_2_kumuleflate/features/in
 BODY
 ```json
 {
-    "type": "FeatureCollection",
-    "bbox": null,
-    "features": [
-        {
-            "type": "Feature",
-            "bbox": [
-                10.520307059205086,
-                63.39736820210165,
-                10.52329710191037,
-                63.39942685007544
-            ],
-            "geometry": <<Geometry of the intersection result ( many lines )>>,
-            "properties": {
-                "komm": "5001",
-                "kumulesone": "500100736",
-                "dvh_objekttype": "kumuleflate"
-            }
-        }
-    ]
+    "shouldClip": false,
+    "Geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    10.52106,
+                    63.398276
+                ],
+                [
+                    10.520416,
+                    63.398199
+                ],
+                [
+                    10.521028,
+                    63.397848
+                ],
+                [
+                    10.52106,
+                    63.398276
+                ]
+            ]
+        ]
+    }
 }
 ```
 
