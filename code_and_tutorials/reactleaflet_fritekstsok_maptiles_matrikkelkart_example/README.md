@@ -8,7 +8,7 @@ This is a demo of Norkart's maptiles, search and 'matrikkelkart' APIs. In this s
 - Change between norkart's various maptiles. 
 
 ## API Key
-In order to see the demo or use these APIs in your own projects, you will first need an API key. Norkart provides a free trial API key, which you can get by logging in with your github account at [developer.norkart.no](https://developer.norkart.no/).
+In order to see the demo or use these APIs in your own projects, you will first need an API key. Request API access [here](https://www.norkart.no/dataoganalyse/).
 
 ## Built With
 - Typescript - Language.

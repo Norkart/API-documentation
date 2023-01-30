@@ -23,4 +23,5 @@ style: {
 ```
 
 ### Api Key
-Log in at [developer.norkart.no](developer.norkart.no) to get a trial api-key.
+
+Request API access [here](https://www.norkart.no/dataoganalyse/).

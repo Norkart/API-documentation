@@ -1,6 +1,6 @@
 # Norkart API Documentation
 
-This is our collection of developer documentation, examples and tutorials for several of our public API offerings. See https://www.norkart.no/dataoganalyse/  and https://developer.norkart.no/ for product listings, API-keys, contact and support. 
+This is our collection of developer documentation, examples and tutorials for several of our public API offerings. See https://www.norkart.no/dataoganalyse/ for product listings, API-keys, contact and support. 
 
 See [code and tutorials](code_and_tutorials) for complete list of code-snippets, examples and tutorials.
 
@@ -32,7 +32,7 @@ Read more about [Web-Map-Services-(WMS)](WMS)
 Authentication works in the same way for all services. 
 - Example: ```https://fritekstsok.api.norkart.no/suggest/matrikkel/adresse?Query=Oslovei&api_key={{YOUR_API_KEY}}```
 
-Get a free trial key by logging in with your github account at [https://developer.norkart.no/](https://developer.norkart.no/)
+Request API access [here](https://www.norkart.no/dataoganalyse/).
 
 ## Live Demos
 - [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/): Here you can see a minimalistic map application that uses maptiles, fritekstsøk and matrikkelkart APIs. 

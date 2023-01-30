@@ -86,8 +86,8 @@ export const ApiKeyPage = () => {
                         You can get a free API key to try it out at
                     </Typography>
 
-                    <Button color='primary' onClick={() => openInNewTab("https://developer.norkart.no/")}>
-                        developer.norkart.no
+                    <Button color='primary' onClick={() => openInNewTab("https://www.norkart.no/dataoganalyse/apikart")}>
+                        norkart.no
                     </Button>
 
                 </div>
