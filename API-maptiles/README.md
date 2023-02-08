@@ -26,7 +26,8 @@ options: {
 ``````
 
 ### Api Key
-Log in at [developer.norkart.no](developer.norkart.no) to get a trial api-key.
+
+Request API access [here](https://www.norkart.no/dataoganalyse/).
 
 
 ### Leaflet.js Plugin
@@ -39,7 +40,7 @@ We provide an open source plugin for handling attribution and URL-endpoints for 
 
 ### Usage in other libraries / desktop systems
 
-For use in other libraries or desktop systems - please refer to the url-schemes above and see the examples and tutorials below. Remember to reach out at https://developer.norkart.no/ for support. 
+For use in other libraries or desktop systems - please refer to the url-schemes above and see the examples and tutorials below.
 
 ### Code examples and tutorials
 

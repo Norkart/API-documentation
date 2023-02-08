@@ -129,7 +129,7 @@ var map = L.map('mapid').setView([58.14615, 7.99573], 13);
 We then define a variable and instantiate with API key. (As shown below)
 
 ```
-var apiKey = '07C4A129-9D26-4B3D-9BC8-B22E4B6E509E'; //DO NOT USE THIS KEY: DEMO ONLY. Log in at [developer.norkart.no](developer.norkart.no) to get a trial api-key.
+var apiKey = '07C4A129-9D26-4B3D-9BC8-B22E4B6E509E'; //DO NOT USE THIS KEY: DEMO ONLY. Request API access [here](https://www.norkart.no/dataoganalyse/).
 ```
 
 #### 4.3 Define different type of views on map displaying.
