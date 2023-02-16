@@ -9,8 +9,7 @@ This example uses the following of Norkart's services:
 - Norkart WMS-Orto(imagery provider for cesium)
 
 ### How to get keys?
-- A test key valid for 30 days can be obtained at: [developer.norkart.no](https://developer.norkart.no/)
-- For questions go [here](https://www.norkart.no/dataoganalyse/). 
+- Request API access [here](https://www.norkart.no/dataoganalyse/).
  
 ## Built With
 - Typescript - Language.
