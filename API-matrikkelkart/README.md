@@ -2,8 +2,6 @@
 
 MatrikkelKart API exposes geographic information about Matrikkelenheter and Teiger. (Matrikkel is the Norwegian cadaster system)
 
-Swagger: [Matrikkelkart-Swagger](https://matrikkelkart.api.norkart.no/swagger-ui/)
-
 ## Example: Get matrikkel information by coordinate
 To get matrikkel information for the a point with coordinates: latitude: 63.4267428, longitude: 10.3981875
 

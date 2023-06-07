@@ -1,8 +1,6 @@
 # API-Fritekstsok
 Fritekstsok exposes the most updated addresses in Norway.  
 
-Swagger: [Fritekstsok-Swagger](https://fritekstsok.api.norkart.no/swagger-ui/)
-
 ## Code examples and tutorials
 - [Getting Started](./../code_and_tutorials/getting%20started%20-%20fritekstsok)
 - [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
