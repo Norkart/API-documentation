@@ -1,5 +1,5 @@
-# API-Fritekstsok
-Fritekstsok exposes the most updated addresses in Norway.  
+# API-Adresse- og eiendomssøk
+API-Adresse- og eiendomssøk allows addresses searches in all of Norway with the most recent updates.  
 
 ## Code examples and tutorials
 - [Getting Started](./../code_and_tutorials/getting%20started%20-%20fritekstsok)

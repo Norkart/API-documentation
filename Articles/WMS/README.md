@@ -58,26 +58,82 @@ https://waapi.webatlas.no/wms-takhelning/?REQUEST=GetLegendGraphic&VERSION=1.0.0
 ![wms-takhelning-sample-legend-response](./images/geoserver-GetLegendGraphic.png)
 
 ## Use Norkart WMS in QGIS or ArcGIS
-To use Norkart wms-sevices in QGIS or ArcGIS, you must provide the api key. This is done as follows:
 
-### QGIS
+
+### QGIS ###
+To use WMS in QGIS, past the url with your Norkart API key at the end of the url. Make sure to tick the Ignore GetMap/GetTile/GetLegendeGraphic checkbox.
+
 ![how-to-use-in-qgis](./images/qgis_config.png)
+
+>[!IMPORTANT]
+> Remember to check the Ignore GetMap/GetTile/GetLegendeGraphic checkbox. The map will not be displayed unless this option is ticked!
 
 ### ArcGIS
 ![how-to-use-in-arcgis](./images/arcgis_config.png)
 
-### Other desktop viewers
-Gemini and other software have issues adding the &api_key to the URL, so you might want to try to reverse the order. So instead of:
+> 
+> [!TIP]
+> ### Other desktop viewers
+> Gemini and other software have issues adding the &api_key to the URL, so you might want to try to reverse the order. So instead of:
+> You can try
+>
+>```
+>GET https://waapi.webatlas.no/WMS-Takhelning/?api_key={{API_KEY}}&REQUEST=GetCapabilities&SERVICE=WMS
+>```
 
-```
-GET https://waapi.webatlas.no/WMS-Takhelning/?REQUEST=GetCapabilities&SERVICE=WMS&api_key={{API_KEY}}
-```
+### Additional Application Examples
+Here are a few more examples of how you can use Norkart WMS in different scenarios:
 
-You can try
+**Using WMS in Leaflet.js**
+````javascript
+var map = L.map('map').setView([63.43, 10.39], 13);
 
-```
-GET https://waapi.webatlas.no/WMS-Takhelning/?api_key={{API_KEY}}&REQUEST=GetCapabilities&SERVICE=WMS
-```
+L.tileLayer.wms("https://waapi.webatlas.no/wms-takhelning/", {
+    layers: 'wms-takhelning:takhelning',
+    format: 'image/png',
+    transparent: true,
+    attribution: '&copy; Norkart',
+    api_key: '{{API_KEY}}'
+}).addTo(map);
+
+Using WMS in Mapbox GL JS
+
+map.addSource('wms', {
+  'type': 'raster',
+  'tiles': [
+    'https://waapi.webatlas.no/wms-takhelning/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&LAYERS=wms-takhelning:takhelning&FORMAT=image/png&TRANSPARENT=true&BBOX={bbox-epsg-3857}&SRS=EPSG:3857&WIDTH=256&HEIGHT=256&api_key={{API_KEY}}'
+  ],
+  'tileSize': 256
+});
+
+map.addLayer({
+  'id': 'wms-layer',
+  'type': 'raster',
+  'source': 'wms',
+  'paint': {}
+});
+````
+**Using WMS in OpenLayers**
+````javascript
+var wmsSource = new ol.source.TileWMS({
+  url: 'https://waapi.webatlas.no/wms-takhelning/',
+  params: {'LAYERS': 'wms-takhelning:takhelning', 'TILED': true, 'api_key': '{{API_KEY}}'},
+  serverType: 'geoserver'
+});
+
+var wmsLayer = new ol.layer.Tile({
+  source: wmsSource
+});
+
+var map = new ol.Map({
+  target: 'map',
+  layers: [wmsLayer],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([10.39, 63.43]),
+    zoom: 13
+  })
+});
+````
 
 ## Useful resources:
 - Wms in leaflet: https://leafletjs.com/examples/wms/wms.html
@@ -94,3 +150,10 @@ https://docs.geoserver.org/stable/en/user/services/wms/reference.html.
 Geoserver. 
 GetLegendGraphic. 
 https://docs.geoserver.org/latest/en/user/services/wms/get_legend_graphic/index.html#colormap-type-is-ramp
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
-# API-Matrikkelkart
+# API Eiendomsdata
 
-MatrikkelKart API exposes geographic information about Matrikkelenheter and Teiger. (Matrikkel is the Norwegian cadaster system)
+API Eiendomsdata exposes geographic information about Matrikkelenheter and Teiger. (Matrikkel is the Norwegian cadaster system)
 
 ## Example: Get matrikkel information by coordinate
 To get matrikkel information for the a point with coordinates: latitude: 63.4267428, longitude: 10.3981875
@@ -10,7 +10,6 @@ To get matrikkel information for the a point with coordinates: latitude: 63.4267
 ```
 GET
 https://matrikkelkart.api.norkart.no/teig/punkt?X=10.3981875&Y=63.4267428&api_key=${{YOUR_API_KEY}}&GeometryTextFormat=GeoJson
-
 ```
 
 ### Responses
