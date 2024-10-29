@@ -26,7 +26,7 @@ GET https://waapi.webatlas.no/WMS-Takhelning/?REQUEST=GetCapabilities&SERVICE=WM
 ```
 
 ### Result:
-- an xml with metadata about the service, including supported operations and parameters, and a list of the available layers (too large to show)
+- A xml with metadata about the service, including supported operations and parameters, and a list of the available layers (too large to show)
 
 
 ## GetMap:
