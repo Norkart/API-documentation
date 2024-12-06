@@ -1,6 +1,6 @@
 # WAAPI-Takflater
 
-WAAPI-Takflater provides comprehensive data about rooftops across Norway. This guide gives a brief overview to help developers integrate with this service.
+WAAPI-Takflater provides comprehensive data about roof across Norway. This guide gives a brief overview to help developers integrate with this service.
 
 ## Getting Started
 

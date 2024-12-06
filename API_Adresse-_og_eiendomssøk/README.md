@@ -1,37 +1,43 @@
-# API-Adresse- og eiendomssøk
-API-Adresse- og eiendomssøk allows addresses searches in all of Norway with the most recent updates.  
+# API-Adresse- og eiendomssøk 
 
-## Code examples and tutorials
-- [Getting Started](./../code_and_tutorials/getting%20started%20-%20fritekstsok)
-- [React Example:](./../code_and_tutorials/reactleaflet_fritekstsok_maptiles_matrikkelkart_example) In this demo you can see fritekstsøk used in a simple React application.
+### Introduction
+API-Adresse- og eiendomssøk is a REST API designed for accurate and rapid searches across multiple data sources in Norway. The service provides updated information from Norkart's synchronized copy of the land register and property register, with a maximum delay of one day.
 
-## Recommendations
+![Implementation of the api together with a map](images\Sok_Produktbeskrivelse-D8mOVPYT.png) <br clear="left"/>
+Implementation of the Adresse- og eiendomssøk API to enable interactive address and property search with a map.
 
-### Suggest - Autocomplete 
-For autocomplete it is recommended to use the /suggest/kommunecustom endpoint. This endpoint can be used to search multiple targets (depending on what you want to search for), but for most purposes this endpoint should be used with targets=gateadresse. [An example is shown below](#example-get-address-suggestions-by-query)
-[More details about the kommunecustom endpoints](../code_and_tutorials/getting%20started%20-%20fritekstsok/HowTo/KOMMUNECUSTOM.md)
+### Main Functionality
+- **Autocomplete Search**: Provides immediate responses based on the entered search text. Not designed to handle typos.
+- **Fuzzy Search**: Allows simple typos, offering greater flexibility.
+- **Geocoding**: Validates addresses and provides details about the accuracy of the results.
+- **Reverse Geocoding**: Searches for data sources based on geographical coordinates.
 
-### Search - Gives more information + 'Fuzzy'
-While /suggest/kommunecustom is great for autocomplete purposes, sometimes one wants more information than what this endpoint returns. If this is the case, the search endpoint can be used insead: /search/kommunecustom. This endpoint can be used in the same way as the suggest-endpoint but it is a bit slower and therefore not suitable for autocomplete-purposes. 
+### Data Sources
+Searches can be performed against several data sources:
+- **Norkart's synchronized copy of the land register and property register (Kartverket)**:
+  - Street addresses and streets
+  - Properties (Land units): Current and expired
+  - Owners: Organizations and individuals
+- **Central Place Name Register (SSR)**: Place names
+- **Other copies of data from Kartverket**: Postal zones
 
-Reasons to use this endpoint instead of suggest:
-1. The search endpoint returns more information
-2. The search-endpoint is 'fuzzy'. Meaning: If you are searching for an adress which has the name Huleveien 13, but you set query='Hulevegen 13' you will still get respons from the API. If you do the same 'typo' on the suggest-endpoint, this adress will not be returned. Another way to put it: the search-endpoint is less strict than the suggest-endpoint.
+### Handling Geographical Information
+The service returns data in JSON format. For geographical information, the GeoJSON standard is used with coordinates in WGS4 (EPSG:4326). Users can specify other input and output coordinate systems.
 
+### Technical Documentation
+The service is documented through Norkart's documentation portal, ensuring user-friendliness and efficient integration by testing various endpoints. Swagger/Open API documentation is available upon request.
 
-## Example: Get address suggestions by query
-The ```suggest/kommunecustom``` endpoint with ```?targets=gateadresse```, returns a list of address suggestions based on the ```Query``` parameter, where you can limit the size of the returned list by the ```Size``` parameter. 
+### Subscription Requirement
+Please note that this service requires a subscription. For inquiries, you can contact us here: [Norkart Customer Support](https://www.norkart.no/kundestotte).
 
-### Request
+### API Examples
+- **Autocomplete**: It is recommended to use the `/suggest/kommunecustom` endpoint for addresses.
+- **Search for more information**: Use the `/search/kommunecustom` endpoint for more detailed information, with support for fuzzy searches.
 
-```
-GET
-https://fritekstsok.api.norkart.no/suggest/kommunecustom?targets=gateadresse&Query=Oslo&Size=1&api_key={{YOUR_API_KEY}}
-```
-
-### Response
-
-```json
+#### Example Request
+```http
+GET https://fritekstsok.api.norkart.no/suggest/kommunecustom?targets=gateadresse&Query=Oslo&Size=1&api_key={{YOUR_API_KEY}}
+Example Response
 {
     "Options": [
         {
@@ -61,7 +67,4 @@ https://fritekstsok.api.norkart.no/suggest/kommunecustom?targets=gateadresse&Que
     "TotalHits": 46,
     "SRS": 4326
 }
-
-```
-
-The ```Url``` field in the response contains the search endpoint where you get more detailed information over the address in question.  
+The URL field in the response provides access to more detailed information about the address.
