@@ -1,6 +1,6 @@
-# Maptiles Developer Documentation
+# Tile Map Service Developer Documentation
 
-Maptiles is a tilecache service that provides access to background maps and detailed aerial photos. The service utilizes a standard XYZ [tilescheme](https://en.wikipedia.org/wiki/Tiled_web_map).
+Tile Map Service (also kalled Maptiles) is a tilecache service that provides access to background maps and detailed aerial photos. The service utilizes a standard XYZ [tilescheme](https://en.wikipedia.org/wiki/Tiled_web_map).
 
 ## Tile URL Format
 

@@ -136,9 +136,9 @@ var map = new ol.Map({
 ````
 
 ## Useful resources:
-- Wms in leaflet: https://leafletjs.com/examples/wms/wms.html
-- Wms in mapbox: https://docs.mapbox.com/mapbox-gl-js/example/wms/
-- Geoserver wms-documentation: https://docs.geoserver.org/stable/en/user/services/wms/reference.html
+- WMS in leaflet: https://leafletjs.com/examples/wms/wms.html
+- WMS in mapbox: https://docs.mapbox.com/mapbox-gl-js/example/wms/
+- Geoserver WMS-documentation: https://docs.geoserver.org/stable/en/user/services/wms/reference.html
 
 ## References
 <a id="1">[1]</a> 
