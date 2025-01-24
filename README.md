@@ -5,7 +5,7 @@ Welcome to the Norkart API documentation. This repository contains developer doc
 ## Available Documentation
 
 ### Code Examples and Tutorials
-Explore our [code examples and tutorials](code_and_tutorials/README.md) to see practical implementations and learn how to use our APIs effectively.
+Explore our [code examples and tutorials](<code and tutorials/README.md>) to see practical implementations and learn how to use our APIs effectively.
 
 ### API Documentation
 We provide detailed documentation for the following APIs:
