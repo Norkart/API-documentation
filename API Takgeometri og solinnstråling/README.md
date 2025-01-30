@@ -34,7 +34,7 @@ For a more detailed view or when you expect the user might have typos or slight 
 
 **Request**:
 \```http
-GET https://waapi-takflater.api.norkart.no/takflater/punkt?Y=59.908&X=10.767&api_key={{YOUR_API_KEY}}
+GET https://takflater.api.norkart.no/takflater/punkt?Y=59.908&X=10.767&api_key={{YOUR_API_KEY}}
 \```
 
 **Response**:
