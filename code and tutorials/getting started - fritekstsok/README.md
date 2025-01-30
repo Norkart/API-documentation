@@ -2,7 +2,6 @@
 
 ## Relevant Documentation and Links
 - [Fritekstsøk Documentation](./../../API-fritekstsok)
-- [Fritekstsøk Swagger](https://fritekstsok.api.norkart.no/swagger-ui/)
 
 ## HowTo
 - [HowTo: Refine search for municipalities](./HowTo/KOMMUNECUSTOM.md)
