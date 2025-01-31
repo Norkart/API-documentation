@@ -10,11 +10,11 @@ Explore our [code examples and tutorials](<code and tutorials/README.md>) to see
 ### API Documentation
 We provide detailed documentation for the following APIs:
 
-* [API Bakgrunnskart](API_Bakgrunnskart/README.md)
-* [API Adresse- og eiendomssøk](API_Adresse-_og_eiendomssøk/README.md)
-* [API Eiendomsdata](API_Eiendomsdata/README.md)
-* [API Datavarehus](API_Datavarehus/README.md)
-* [API Takgeometri og solinstråling](API_Takgeometri_og_solinnstråling/README.md)
+* [API Bakgrunnskart](<API Bakgrunnskart/README.md>)
+* [API Adresse- og eiendomssøk](<API Adresse- og eiendomssøk/README.md>)
+* [API Eiendomsdata](<API Eiendomsdata/README.md>)
+* [API Datavarehus](<API Datavarehus/README.md>)
+* [API Takgeometri og solinstråling](<API Takgeometri og solinnstråling/README.md>)
 
 ## About Our APIs
 Norkart's services are primarily RESTful APIs that support data exchange in JSON format.
