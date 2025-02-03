@@ -1,33 +1,37 @@
 # Norkart API Documentation
 
-This is our collection of developer documentation, examples and tutorials for some of our public API offerings. See https://www.norkart.no/dataoganalyse/ for product listings, API-keys, contact and support. 
+Welcome to the Norkart API documentation. This repository contains developer documentation, examples, and tutorials for some of our public API offerings. For product listings, API keys, contact, and support, visit [Norkart Data and Analysis](https://www.norkart.no/dataoganalyse/).
 
-See [code and tutorials](code_and_tutorials) for complete list of code-snippets, examples and tutorials.
+## Available Documentation
 
-## Documented API's at github:
+### Code Examples and Tutorials
+Explore our [code examples and tutorials](<code and tutorials/README.md>) to see practical implementations and learn how to use our APIs effectively.
 
-* [API-maptiles](API-maptiles)
-* [API-fritekstsok](API-fritekstsok)
-* [API-matrikkelkart](API-matrikkelkart)
-* [API-datavarehus](API-datavarehus)
+### API Documentation
+We provide detailed documentation for the following APIs:
 
-## About API's
-Norkarts services are mostly ```REST-services``` which support data-exchange in JSON. 
+* [API Bakgrunnskart](<API Bakgrunnskart/README.md>)
+* [API Adresse- og eiendomssøk](<API Adresse- og eiendomssøk/README.md>)
+* [API Eiendomsdata](<API Eiendomsdata/README.md>)
+* [API Datavarehus](<API Datavarehus/README.md>)
+* [API Takgeometri og solinstråling](<API Takgeometri og solinnstråling/README.md>)
 
-## About Map Services
-There are two types of map services:
-- [Tile-Map-Services](API-maptiles) (```TMS```):
-- [Web-Map-Services](WMS) (```WMS```) 
+## About Our APIs
+Norkart's services are primarily RESTful APIs that support data exchange in JSON format.
 
+### Map Services
+We offer two types of map services:
+- [Tile Map Services (TMS)](Articles/TMS/README.md)
+- [Web Map Services (WMS)](Articles/WMS/README.md)
 
-## Authentication / API key 
-Authentication works in the same way for all services. 
-- Example: ```https://fritekstsok.api.norkart.no/suggest/matrikkel/adresse?Query=Oslovei&api_key={{YOUR_API_KEY}}```
+## Authentication / API Key
+Authentication is consistent across all services. Include your API key as a URL parameter in your requests. For example:
+```bash
+https://fritekstsok.api.norkart.no/suggest/matrikkel/adresse?Query=Oslovei&api_key={{YOUR_API_KEY}}
+```
 
 ## Live Demos
-- [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/): Here you can see a minimalistic map application that uses maptiles, fritekstsøk and matrikkelkart APIs. 
+Check out our [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/) to see a minimalistic map application that uses API Bakgrunnskart, API Adresse- og eiendomssøk, and API Eiendomsdata.
 
-Request API access [here](https://www.norkart.no/dataoganalyse/).
-
-
-
+## Request API Access
+To request API access, visit [Norkart Data and Analysis](https://www.norkart.no/dataoganalyse/).
