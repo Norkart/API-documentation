@@ -24,4 +24,4 @@ style: {
 
 ### Api Key
 
-Request API access [here](https://www.norkart.no/dataoganalyse/).
+Request API access [here](https://www.norkart.no/datatjenester).
