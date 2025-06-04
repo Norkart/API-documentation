@@ -1,6 +1,6 @@
 # Norkart API Documentation
 
-Welcome to the Norkart API documentation. This repository contains developer documentation, examples, and tutorials for some of our public API offerings. For product listings, API keys, contact, and support, visit [Norkart Data and Analysis](https://www.norkart.no/dataoganalyse/).
+Welcome to the Norkart API documentation. This repository contains developer documentation, examples, and tutorials for some of our public API offerings. For product listings, API keys, contact, and support, visit [Norkart Data and Analysis](https://www.norkart.no/datatjenester).
 
 ## Available Documentation
 
@@ -10,11 +10,12 @@ Explore our [code examples and tutorials](<code and tutorials/README.md>) to see
 ### API Documentation
 We provide detailed documentation for the following APIs:
 
-* [API Bakgrunnskart](API_Bakgrunnskart/README.md)
-* [API Adresse- og eiendomssøk](API_Adresse-_og_eiendomssøk/README.md)
-* [API Eiendomsdata](API_Eiendomsdata/README.md)
-* [API Datavarehus](API_Datavarehus/README.md)
-* [API Takgeometri og solinstråling](API_Takgeometri_og_solinnstråling/README.md)
+* [API Bakgrunnskart](<API Bakgrunnskart/README.md>)
+* [API Flyfotokart historisk](<API Flyfotokart historisk/README.md>)
+* [API Adresse- og eiendomssøk](<API Adresse- og eiendomssøk/README.md>)
+* [API Eiendomsdata](<API Eiendomsdata/README.md>)
+* [API Datavarehus](<API Datavarehus/README.md>)
+* [API Takgeometri og solinstråling](<API Takgeometri og solinnstråling/README.md>)
 
 ## About Our APIs
 Norkart's services are primarily RESTful APIs that support data exchange in JSON format.
@@ -34,4 +35,4 @@ https://fritekstsok.api.norkart.no/suggest/matrikkel/adresse?Query=Oslovei&api_k
 Check out our [Norkart API Demo](https://mango-flower-0fd4d4b03.azurestaticapps.net/) to see a minimalistic map application that uses API Bakgrunnskart, API Adresse- og eiendomssøk, and API Eiendomsdata.
 
 ## Request API Access
-To request API access, visit [Norkart Data and Analysis](https://www.norkart.no/dataoganalyse/).
+To request API access, visit [Norkart Data and Analysis](https://www.norkart.no/datatjenester).
