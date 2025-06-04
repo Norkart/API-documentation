@@ -9,7 +9,7 @@ This example uses the following of Norkart's services:
 - Norkart WMS-Orto(imagery provider for cesium)
 
 ### How to get keys?
-- Request API access [here](https://www.norkart.no/dataoganalyse/).
+- Request API access [here](https://www.norkart.no/datatjenester).
  
 ## Built With
 - Typescript - Language.
