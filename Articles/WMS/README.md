@@ -15,7 +15,7 @@ WMS requests can perform (among others) the following operations [[1]](#1):
 | **GetLegendGraphic (optional)** | Retrieves a generated legend for a map                                                                                  |
 
 ## Example calls
-Examples are shown for wms-takhelning. If you want to test this out yourself you will need an Api key. Test the examples by replacing '{{API_KEY}}' with your own api key. Request API access [here](https://www.norkart.no/dataoganalyse/).
+Examples are shown for wms-takhelning. If you want to test this out yourself you will need an Api key. Test the examples by replacing '{{API_KEY}}' with your own api key. Request API access [here](https://www.norkart.no/datatjenester).
 
 ## GetCapabilities:
 

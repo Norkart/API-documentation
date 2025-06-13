@@ -28,6 +28,10 @@ options: {
 }
 ```
 
+## API Key
+
+To access the API, request your key [here](https://www.norkart.no/datatjenester).
+
 ## Integration Guides
 
 ### QGIS
