@@ -20,12 +20,12 @@ Her er to eksempler på historiske flyfoto fra tjenesten:
 
 1. Trondheim Torg på 1960-tallet - Dette flyfotoet viser hvordan Trondheim Torg så ut med aktiv biltrafikk gjennom torget. I dag er området bilfritt og en viktig møteplass i byen.
 
-![Eksempel på historisk flyfoto](images/flyfoto_eksempel_trondheimTorg-BY-pDpay.png)
+![Eksempel på historisk flyfoto](./images/flyfoto_eksempel_trondheimTorg-BY-pDpay.png)
 
 1. Byutvikling over tid - Dette bildet viser samme område fotografert med flere års mellomrom. Man kan tydelig se hvordan bebyggelse, veier og grøntområder har endret seg gjennom årene.
 
 
-![Eksempel på historisk flyfoto](images/flyfoto_eksempel_forandring-DRfAjapU.png)
+![Eksempel på historisk flyfoto](./images/flyfoto_eksempel_forandring-DRfAjapU.png)
 
 
 ## Tjeneste-URL
