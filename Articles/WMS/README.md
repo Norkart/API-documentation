@@ -4,6 +4,13 @@ WMS provides a standardised way of showing raster map layers on a map over http.
 
 Norkart provides a range of WMS services such as thematic data, background maps, aerial images and historical maps.
 
+## Jump to software
+- [QGIS](#qgis)
+- [ArcGIS](#arcgis)
+- [Autodesk AutoCAD Map 3D](#autodesk-autocad-map-3d)
+
+
+
 ## Operations:
 
 WMS requests can perform (among others) the following operations [[1]](#1):
@@ -57,29 +64,35 @@ https://waapi.webatlas.no/wms-takhelning/?REQUEST=GetLegendGraphic&VERSION=1.0.0
 
 ![wms-takhelning-sample-legend-response](./images/geoserver-GetLegendGraphic.png)
 
-## Use Norkart WMS in QGIS or ArcGIS
+## Use Norkart WMS in desktop GIS software
 
 
-### QGIS ###
-To use WMS in QGIS, past the url with your Norkart API key at the end of the url. Make sure to tick the Ignore GetMap/GetTile/GetLegendeGraphic checkbox.
+### QGIS
+To use WMS in QGIS, paste the url with your Norkart API key at the end of the url. Make sure to tick the Ignore GetMap/GetTile/GetLegendGraphic checkbox.
 
 ![how-to-use-in-qgis](./images/qgis_config.png)
 
 >[!IMPORTANT]
-> Remember to check the Ignore GetMap/GetTile/GetLegendeGraphic checkbox. The map will not be displayed unless this option is ticked!
+> Remember to check the Ignore GetMap/GetTile/GetLegendGraphic checkbox. The map will not be displayed unless this option is ticked!
 
 ### ArcGIS
+To use WMS in ArcGIS, add a new **WMS Server Connection** and enter the base Server URL (without any query parameters), e.g. `https://waapi.webatlas.no/wms-orto/`. Under **Custom request parameters**, add a row with `api_key` as the Parameter and your Norkart API key as the Value, then select **OK** to connect.
+
 ![how-to-use-in-arcgis](./images/arcgis_config.png)
 
-> 
-> [!TIP]
-> ### Other desktop viewers
-> Gemini and other software have issues adding the &api_key to the URL, so you might want to try to reverse the order. So instead of:
-> You can try
->
->```
->GET https://waapi.webatlas.no/WMS-Takhelning/?api_key={{API_KEY}}&REQUEST=GetCapabilities&SERVICE=WMS
->```
+### Autodesk AutoCAD Map 3D
+To use Norkart WMS in Autodesk AutoCAD Map 3D:
+1. Open **Data Connect** and choose **Add WMS Connection**.
+2. Give the connection a name and enter the WMS GetCapabilities url as the Server name or URL, e.g. `https://waapi.webatlas.no/WMS-STANDARDKART/?SERVICE=WMS&REQUEST=GetCapabilities`. When prompted for **User Name & Password**, enter `api_key` as the user name and your Norkart API key as the password, then select **Login**.
+
+![autocad-wms-connection-settings](./images/autocad_wms_settings.png)
+
+3. Once connected, AutoCAD Map 3D lists the available layers under **Add Data to Map**. Tick the layer(s) you want to add, set the **Server CS Code** to the coordinate system you want the layer served in (e.g. EPSG:4326 or EPSG:25832), and add the layer(s) to your drawing.
+
+![autocad-wms-layer-selection-and-coordinate-system](./images/autocad_wms_layerselect_and_change_coordsys.png)
+
+>[!TIP]
+> If the layer fails to load or is placed incorrectly, double check that the Server CS Code matches the coordinate system used elsewhere in your drawing. Also remember to set the coordinate system before adding the WMS
 
 ### Additional Application Examples
 Here are a few more examples of how you can use Norkart WMS in different scenarios:
@@ -95,9 +108,10 @@ L.tileLayer.wms("https://waapi.webatlas.no/wms-takhelning/", {
     attribution: '&copy; Norkart',
     api_key: '{{API_KEY}}'
 }).addTo(map);
+````
 
-Using WMS in Mapbox GL JS
-
+**Using WMS in Mapbox GL JS**
+````javascript
 map.addSource('wms', {
   'type': 'raster',
   'tiles': [
