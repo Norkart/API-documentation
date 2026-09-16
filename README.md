@@ -11,6 +11,7 @@ Explore our [code examples and tutorials](<code and tutorials/README.md>) to see
 We provide detailed documentation for the following APIs:
 
 * [API Bakgrunnskart](<API Bakgrunnskart/README.md>)
+* [API Vektor Bakgrunnskart](<API Vektor Bakgrunnskart/README.md>)
 * [API Adresse- og eiendomssøk](<API Adresse- og eiendomssøk/README.md>)
 * [API Eiendomsdata](<API Eiendomsdata/README.md>)
 * [API Datavarehus](<API Datavarehus/README.md>)
