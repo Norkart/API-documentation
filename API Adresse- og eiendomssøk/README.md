@@ -3,7 +3,7 @@
 ### Introduction
 API-Adresse- og eiendomssøk is a REST API designed for accurate and rapid searches across multiple data sources in Norway. The service provides updated information from Norkart's synchronized copy of the land register and property register, with a maximum delay of one day.
 
-![Implementation of the api together with a map](images\Sok_Produktbeskrivelse-D8mOVPYT.png) <br clear="left"/>
+![Implementation of the api together with a map](./images/Sok_Produktbeskrivelse-D8mOVPYT.png) <br clear="left"/>
 Implementation of the Adresse- og eiendomssøk API to enable interactive address and property search with a map.
 
 ### Main Functionality

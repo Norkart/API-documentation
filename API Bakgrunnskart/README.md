@@ -16,24 +16,6 @@ Welcome to the documentation for Norkart API Bakgrunnskart. This service collect
 | ------------- | ------------- | ------------- |
 |<img src="images/Standardkart.png" width="300" /> | <img src="images/Gråkart.png" width="300" />| <img src="images/Ortofoto.png" width="300" />|
 
-## Available maps (Tilesets) for TMS
-
-Several types of map are available through the TMS service by replacing the "tileset" parameter in the url. The available maps are listed bellow:
-
-```javascript
-options: {
-    url: '//waapi.webatlas.no/maptiles/tiles/{tileset}/wa_grid/{z}/{x}/{y}.{ext}?APITOKEN={apikey}',
-    tileset: {
-        vector: {tileset: 'webatlas-standard-vektor', ext: 'png'},
-        aerial: {tileset: 'webatlas-orto-newup', ext: 'jpeg'},
-        hybrid: {tileset: 'webatlas-standard-hybrid', ext: 'jpeg'},
-        grey: {tileset: 'webatlas-gray-vektor', ext: 'png'},
-        medium: {tileset: 'webatlas-medium-vektor', ext: 'png'},
-        lite: {tileset: 'webatlas-lite-vektor', ext: 'png'}
-    },
-}
-```
-
 ## Authentication / API Key
 
 To use Norkart's map services, you will need an API key. API keys are provided on a business-to-business (B2B) basis. If you are interested in a demo or wish to request an API key, please contact us at [datatjenester@norkart.no](mailto:datatjenester@norkart.no).
